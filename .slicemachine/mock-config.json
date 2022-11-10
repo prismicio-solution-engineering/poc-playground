@@ -1,0 +1,24 @@
+{
+  "_cts": {
+    "homepage": {},
+    "landing_page": {},
+    "menu": {}
+  },
+  "slices": {
+    "Menu": {
+      "default": {
+        "primary": {
+          "label": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      },
+      "dropdown": {
+        "primary": {}
+      }
+    }
+  }
+}
