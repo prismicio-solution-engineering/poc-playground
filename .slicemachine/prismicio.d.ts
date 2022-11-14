@@ -6,6 +6,120 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
+/** Content for Footer documents */
+interface FooterDocumentData {
+    /**
+     * Internal Links field in *Footer*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.internalLinks[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    internalLinks: prismicT.GroupField<Simplify<FooterDocumentDataInternalLinksItem>>;
+    /**
+     * Social Links field in *Footer*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.social_links[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    social_links: prismicT.GroupField<Simplify<FooterDocumentDataSocialLinksItem>>;
+    /**
+     * Copyright field in *Footer*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.copyright
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    copyright: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *Footer*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<FooterDocumentDataSlicesSlice>;
+}
+/**
+ * Item in Footer → Internal Links
+ *
+ */
+export interface FooterDocumentDataInternalLinksItem {
+    /**
+     * Link Label field in *Footer → Internal Links*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.internalLinks[].link_label
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    link_label: prismicT.RichTextField;
+    /**
+     * Link field in *Footer → Internal Links*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.internalLinks[].link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link: prismicT.LinkField;
+}
+/**
+ * Item in Footer → Social Links
+ *
+ */
+export interface FooterDocumentDataSocialLinksItem {
+    /**
+     * Social Link field in *Footer → Social Links*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.social_links[].social_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    social_link: prismicT.LinkField;
+    /**
+     * Social Icon field in *Footer → Social Links*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.social_links[].social_icon
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    social_icon: prismicT.ImageField<never>;
+}
+/**
+ * Slice for *Footer → Slice Zone*
+ *
+ */
+type FooterDocumentDataSlicesSlice = WufooFormSlice;
+/**
+ * Footer document from Prismic
+ *
+ * - **API ID**: `footer`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<FooterDocumentData>, "footer", Lang>;
 /** Content for Homepage documents */
 type HomepageDocumentData = Record<string, never>;
 /**
@@ -31,7 +145,24 @@ type LandingPageDocumentData = Record<string, never>;
  */
 export type LandingPageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<LandingPageDocumentData>, "landing_page", Lang>;
 /** Content for Menu documents */
-type MenuDocumentData = Record<string, never>;
+interface MenuDocumentData {
+    /**
+     * Slice Zone field in *Menu*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: menu.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<MenuDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Menu → Slice Zone*
+ *
+ */
+type MenuDocumentDataSlicesSlice = MenuSlice;
 /**
  * Menu document from Prismic
  *
@@ -42,7 +173,7 @@ type MenuDocumentData = Record<string, never>;
  * @typeParam Lang - Language API ID of the document.
  */
 export type MenuDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<MenuDocumentData>, "menu", Lang>;
-export type AllDocumentTypes = HomepageDocument | LandingPageDocument | MenuDocument;
+export type AllDocumentTypes = FooterDocument | HomepageDocument | LandingPageDocument | MenuDocument;
 /**
  * Primary content in Menu → Primary
  *
@@ -188,6 +319,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocument, LandingPageDocumentData, LandingPageDocument, MenuDocumentData, MenuDocument, AllDocumentTypes, MenuSliceDefaultPrimary, MenuSliceDefault, MenuSliceDropdownPrimary, MenuSliceDropdownItem, MenuSliceDropdown, MenuSliceVariation, MenuSlice };
+        export type { FooterDocumentData, FooterDocumentDataInternalLinksItem, FooterDocumentDataSocialLinksItem, FooterDocumentDataSlicesSlice, FooterDocument, HomepageDocumentData, HomepageDocument, LandingPageDocumentData, LandingPageDocument, MenuDocumentData, MenuDocumentDataSlicesSlice, MenuDocument, AllDocumentTypes, MenuSliceDefaultPrimary, MenuSliceDefault, MenuSliceDropdownPrimary, MenuSliceDropdownItem, MenuSliceDropdown, MenuSliceVariation, MenuSlice };
     }
 }

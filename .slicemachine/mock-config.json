@@ -2,7 +2,8 @@
   "_cts": {
     "homepage": {},
     "landing_page": {},
-    "menu": {}
+    "menu": {},
+    "footer": {}
   },
   "slices": {
     "Menu": {
