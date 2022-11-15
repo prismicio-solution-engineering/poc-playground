@@ -209,6 +209,167 @@ type MenuDocumentDataSlicesSlice = MenuSlice;
 export type MenuDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<MenuDocumentData>, "menu", Lang>;
 export type AllDocumentTypes = FooterDocument | HomepageDocument | LandingPageDocument | MenuDocument;
 /**
+ * Primary content in HeroBanner → Primary
+ *
+ */
+interface HeroBannerSliceDefaultPrimary {
+    /**
+     * Title Top line field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: Top line content
+     * - **API ID Path**: hero_banner.primary.title_top_line
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title_top_line: prismicT.TitleField;
+    /**
+     * Title Bottom Line field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: Bottom line content
+     * - **API ID Path**: hero_banner.primary.title_bottom_line
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title_bottom_line: prismicT.TitleField;
+    /**
+     * Description field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: hero_banner.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * Image field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero_banner.primary.image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+}
+/**
+ * Item in HeroBanner → Items
+ *
+ */
+export interface HeroBannerSliceDefaultItem {
+    /**
+     * Cta Label field in *HeroBanner → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero_banner.items[].cta_label
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    cta_label: prismicT.KeyTextField;
+    /**
+     * Cta Link field in *HeroBanner → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero_banner.items[].cta_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    cta_link: prismicT.LinkField;
+    /**
+     * Cta Type field in *HeroBanner → Items*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: Select button type
+     * - **Default Value**: Primary
+     * - **API ID Path**: hero_banner.items[].cta_type
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    cta_type: prismicT.SelectField<"Primary" | "Secondary", "filled">;
+}
+/**
+ * Default variation for HeroBanner Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `HeroBanner`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HeroBannerSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<HeroBannerSliceDefaultPrimary>, Simplify<HeroBannerSliceDefaultItem>>;
+/**
+ * Primary content in HeroBanner → Primary
+ *
+ */
+interface HeroBannerSliceWithoutCtaPrimary {
+    /**
+     * Title Top line field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: Top line content
+     * - **API ID Path**: hero_banner.primary.title_top_line
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title_top_line: prismicT.TitleField;
+    /**
+     * Title Bottom Line field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: Bottom line content
+     * - **API ID Path**: hero_banner.primary.title_bottom_line
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title_bottom_line: prismicT.TitleField;
+    /**
+     * Description field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: hero_banner.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * Image field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero_banner.primary.image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+}
+/**
+ * Without Cta variation for HeroBanner Slice
+ *
+ * - **API ID**: `withoutCta`
+ * - **Description**: `HeroBanner`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HeroBannerSliceWithoutCta = prismicT.SharedSliceVariation<"withoutCta", Simplify<HeroBannerSliceWithoutCtaPrimary>, never>;
+/**
+ * Slice variation for *HeroBanner*
+ *
+ */
+type HeroBannerSliceVariation = HeroBannerSliceDefault | HeroBannerSliceWithoutCta;
+/**
+ * HeroBanner Shared Slice
+ *
+ * - **API ID**: `hero_banner`
+ * - **Description**: `HeroBanner`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HeroBannerSlice = prismicT.SharedSlice<"hero_banner", HeroBannerSliceVariation>;
+/**
  * Primary content in Menu → Primary
  *
  */
@@ -313,6 +474,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocumentDataInternalLinksItem, FooterDocumentDataSocialLinksItem, FooterDocumentDataSlicesSlice, FooterDocument, HomepageDocumentData, HomepageDocument, LandingPageDocumentData, LandingPageDocument, MenuDocumentData, MenuDocumentDataSlicesSlice, MenuDocument, AllDocumentTypes, MenuSliceDefaultPrimary, MenuSliceDefault, MenuSliceDropdownPrimary, MenuSliceDropdownItem, MenuSliceDropdown, MenuSliceVariation, MenuSlice };
+        export type { FooterDocumentData, FooterDocumentDataInternalLinksItem, FooterDocumentDataSocialLinksItem, FooterDocumentDataSlicesSlice, FooterDocument, HomepageDocumentData, HomepageDocument, LandingPageDocumentData, LandingPageDocument, MenuDocumentData, MenuDocumentDataSlicesSlice, MenuDocument, AllDocumentTypes, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefaultItem, HeroBannerSliceDefault, HeroBannerSliceWithoutCtaPrimary, HeroBannerSliceWithoutCta, HeroBannerSliceVariation, HeroBannerSlice, MenuSliceDefaultPrimary, MenuSliceDefault, MenuSliceDropdownPrimary, MenuSliceDropdownItem, MenuSliceDropdown, MenuSliceVariation, MenuSlice };
     }
 }

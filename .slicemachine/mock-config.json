@@ -20,6 +20,38 @@
       "dropdown": {
         "primary": {}
       }
+    },
+    "HeroBanner": {
+      "default": {
+        "primary": {
+          "title_top_line": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "title_bottom_line": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {
+          "cta_label": {
+            "content": "Click here"
+          }
+        }
+      },
+      "withoutCta": {
+        "items": {}
+      }
     }
   }
 }

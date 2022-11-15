@@ -1,0 +1,131 @@
+{
+  "id": "hero_banner",
+  "type": "SharedSlice",
+  "name": "HeroBanner",
+  "description": "HeroBanner",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "HeroBanner",
+      "primary": {
+        "title_top_line": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title Top line",
+            "placeholder": "Top line content",
+            "allowTargetBlank": true,
+            "single": "heading1"
+          }
+        },
+        "title_bottom_line": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title Bottom Line",
+            "placeholder": "Bottom line content",
+            "allowTargetBlank": true,
+            "single": "heading1"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "A nice description of your feature",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {
+              "width": 640,
+              "height": 554
+            },
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {
+        "cta_label": {
+          "type": "Text",
+          "config": {
+            "label": "Cta Label",
+            "placeholder": ""
+          }
+        },
+        "cta_link": {
+          "type": "Link",
+          "config": {
+            "label": "Cta Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "cta_type": {
+          "type": "Select",
+          "config": {
+            "label": "Cta Type",
+            "placeholder": "Select button type",
+            "options": [
+              "Primary",
+              "Secondary"
+            ],
+            "default_value": "Primary"
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    },
+    {
+      "id": "withoutCta",
+      "name": "Without Cta",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "HeroBanner",
+      "primary": {
+        "title_top_line": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title Top line",
+            "placeholder": "Top line content",
+            "allowTargetBlank": true,
+            "single": "heading1"
+          }
+        },
+        "title_bottom_line": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title Bottom Line",
+            "placeholder": "Bottom line content",
+            "allowTargetBlank": true,
+            "single": "heading1"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "A nice description of your feature",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

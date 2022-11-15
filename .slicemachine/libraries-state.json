@@ -1,6 +1,248 @@
 {
   "slices": {
     "components": {
+      "hero_banner": {
+        "library": "slices",
+        "id": "hero_banner",
+        "name": "HeroBanner",
+        "description": "HeroBanner",
+        "model": {
+          "id": "hero_banner",
+          "type": "SharedSlice",
+          "name": "HeroBanner",
+          "description": "HeroBanner",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "HeroBanner",
+              "primary": {
+                "title_top_line": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title Top line",
+                    "placeholder": "Top line content",
+                    "allowTargetBlank": true,
+                    "single": "heading1"
+                  }
+                },
+                "title_bottom_line": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title Bottom Line",
+                    "placeholder": "Bottom line content",
+                    "allowTargetBlank": true,
+                    "single": "heading1"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Image",
+                    "constraint": {
+                      "width": 640,
+                      "height": 554
+                    },
+                    "thumbnails": []
+                  }
+                }
+              },
+              "items": {
+                "cta_label": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Cta Label",
+                    "placeholder": ""
+                  }
+                },
+                "cta_link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Cta Link",
+                    "placeholder": "",
+                    "select": null
+                  }
+                },
+                "cta_type": {
+                  "type": "Select",
+                  "config": {
+                    "label": "Cta Type",
+                    "placeholder": "Select button type",
+                    "options": [
+                      "Primary",
+                      "Secondary"
+                    ],
+                    "default_value": "Primary"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            },
+            {
+              "id": "withoutCta",
+              "name": "Without Cta",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "HeroBanner",
+              "primary": {
+                "title_top_line": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title Top line",
+                    "placeholder": "Top line content",
+                    "allowTargetBlank": true,
+                    "single": "heading1"
+                  }
+                },
+                "title_bottom_line": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title Bottom Line",
+                    "placeholder": "Bottom line content",
+                    "allowTargetBlank": true,
+                    "single": "heading1"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "cta_label": "Click here",
+                "cta_link": {
+                  "link_type": "Web",
+                  "url": "https://slicemachine.dev"
+                },
+                "cta_type": "Primary"
+              }
+            ],
+            "primary": {
+              "title_top_line": [
+                {
+                  "type": "heading1",
+                  "text": "Current",
+                  "spans": []
+                }
+              ],
+              "title_bottom_line": [
+                {
+                  "type": "heading1",
+                  "text": "Actual",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Minim ut eiusmod amet ipsum excepteur anim aute aliqua sint fugiat aliqua eu.",
+                  "spans": []
+                }
+              ],
+              "image": {
+                "dimensions": {
+                  "width": 640,
+                  "height": 554
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa"
+              }
+            },
+            "slice_type": "hero_banner"
+          },
+          "withoutCta": {
+            "variation": "withoutCta",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title_top_line": [
+                {
+                  "type": "heading1",
+                  "text": "Factory",
+                  "spans": []
+                }
+              ],
+              "title_bottom_line": [
+                {
+                  "type": "heading1",
+                  "text": "Shallow",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Velit do eu Lorem est elit tempor Lorem anim eu occaecat anim. Nostrud laborum exercitation magna nostrud aliquip adipisicing aliquip sit velit ipsum qui velit in laborum. Esse ipsum eu amet commodo eiusmod eiusmod Lorem minim adipisicing qui voluptate dolore ut ad.",
+                  "spans": []
+                }
+              ],
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88"
+              }
+            },
+            "slice_type": "hero_banner"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/dianka/Documents/POC/prismic-poc/.slicemachine/assets/slices/HeroBanner/default/preview.png",
+            "width": 1280,
+            "height": 582
+          },
+          "withoutCta": {
+            "path": "/Users/dianka/Documents/POC/prismic-poc/.slicemachine/assets/slices/HeroBanner/withoutCta/preview.png",
+            "width": 1280,
+            "height": 548
+          }
+        }
+      },
       "menu": {
         "library": "slices",
         "id": "menu",
@@ -91,13 +333,13 @@
               "label": [
                 {
                   "type": "paragraph",
-                  "text": "Labore pariatur do et mollit enim est esse Lorem.",
+                  "text": "Enim proident sunt esse commodo veniam et ipsum anim elit cillum et ex amet aute. Esse aliquip ipsum do dolor ad anim sunt duis anim deserunt non velit commodo.",
                   "spans": []
                 }
               ],
               "link": {
                 "link_type": "Web",
-                "url": "http://google.com"
+                "url": "https://slicemachine.dev"
               }
             },
             "slice_type": "menu"
@@ -110,13 +352,13 @@
                 "second_level_label": [
                   {
                     "type": "paragraph",
-                    "text": "Anim Lorem incididunt quis sit anim. Ex nisi duis mollit eiusmod esse sit ut voluptate excepteur ea aute velit. Sit labore cupidatat esse fugiat enim nostrud laborum cillum ea est sunt veniam ea.",
+                    "text": "Elit ipsum consequat anim et incididunt exercitation non enim do voluptate consequat amet eu sunt occaecat. Esse ipsum excepteur nulla sint id exercitation voluptate velit aute do minim non deserunt elit dolor. Ex nostrud cillum ullamco nostrud fugiat.",
                     "spans": []
                   }
                 ],
                 "second_level_link": {
                   "link_type": "Web",
-                  "url": "https://slicemachine.dev"
+                  "url": "http://twitter.com"
                 }
               }
             ],
@@ -124,7 +366,7 @@
               "dropdown_label": [
                 {
                   "type": "paragraph",
-                  "text": "Incididunt in amet aute nostrud adipisicing excepteur tempor. Pariatur ea exercitation veniam veniam ea excepteur nostrud labore ad.",
+                  "text": "Mollit irure sit sit consequat sint et non excepteur eu. Nisi nisi ipsum exercitation culpa laborum.",
                   "spans": []
                 }
               ]
