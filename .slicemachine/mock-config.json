@@ -52,6 +52,32 @@
       "withoutCta": {
         "items": {}
       }
+    },
+    "Accordion": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "content": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 2
+            }
+          }
+        }
+      }
     }
   }
 }

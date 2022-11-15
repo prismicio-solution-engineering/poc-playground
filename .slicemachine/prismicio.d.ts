@@ -209,6 +209,71 @@ type MenuDocumentDataSlicesSlice = MenuSlice;
 export type MenuDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<MenuDocumentData>, "menu", Lang>;
 export type AllDocumentTypes = FooterDocument | HomepageDocument | LandingPageDocument | MenuDocument;
 /**
+ * Primary content in Accordion → Primary
+ *
+ */
+interface AccordionSliceDefaultPrimary {
+    /**
+     * Title field in *Accordion → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: Accordion title
+     * - **API ID Path**: accordion.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+}
+/**
+ * Item in Accordion → Items
+ *
+ */
+export interface AccordionSliceDefaultItem {
+    /**
+     * Title field in *Accordion → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: Dropdown title
+     * - **API ID Path**: accordion.items[].title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Content field in *Accordion → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: Content
+     * - **API ID Path**: accordion.items[].content
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    content: prismicT.RichTextField;
+}
+/**
+ * Default variation for Accordion Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Accordion`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type AccordionSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<AccordionSliceDefaultPrimary>, Simplify<AccordionSliceDefaultItem>>;
+/**
+ * Slice variation for *Accordion*
+ *
+ */
+type AccordionSliceVariation = AccordionSliceDefault;
+/**
+ * Accordion Shared Slice
+ *
+ * - **API ID**: `accordion`
+ * - **Description**: `Accordion`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type AccordionSlice = prismicT.SharedSlice<"accordion", AccordionSliceVariation>;
+/**
  * Primary content in HeroBanner → Primary
  *
  */
@@ -474,6 +539,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocumentDataInternalLinksItem, FooterDocumentDataSocialLinksItem, FooterDocumentDataSlicesSlice, FooterDocument, HomepageDocumentData, HomepageDocument, LandingPageDocumentData, LandingPageDocument, MenuDocumentData, MenuDocumentDataSlicesSlice, MenuDocument, AllDocumentTypes, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefaultItem, HeroBannerSliceDefault, HeroBannerSliceWithoutCtaPrimary, HeroBannerSliceWithoutCta, HeroBannerSliceVariation, HeroBannerSlice, MenuSliceDefaultPrimary, MenuSliceDefault, MenuSliceDropdownPrimary, MenuSliceDropdownItem, MenuSliceDropdown, MenuSliceVariation, MenuSlice };
+        export type { FooterDocumentData, FooterDocumentDataInternalLinksItem, FooterDocumentDataSocialLinksItem, FooterDocumentDataSlicesSlice, FooterDocument, HomepageDocumentData, HomepageDocument, LandingPageDocumentData, LandingPageDocument, MenuDocumentData, MenuDocumentDataSlicesSlice, MenuDocument, AllDocumentTypes, AccordionSliceDefaultPrimary, AccordionSliceDefaultItem, AccordionSliceDefault, AccordionSliceVariation, AccordionSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefaultItem, HeroBannerSliceDefault, HeroBannerSliceWithoutCtaPrimary, HeroBannerSliceWithoutCta, HeroBannerSliceVariation, HeroBannerSlice, MenuSliceDefaultPrimary, MenuSliceDefault, MenuSliceDropdownPrimary, MenuSliceDropdownItem, MenuSliceDropdown, MenuSliceVariation, MenuSlice };
     }
 }
