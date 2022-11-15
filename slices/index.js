@@ -3,15 +3,18 @@
 import Accordion from './Accordion';
 import HeroBanner from './HeroBanner';
 import Menu from './Menu';
+import SocialFeedFlickr from './SocialFeedFlickr';
 
 export {
 	Accordion,
 	HeroBanner,
 	Menu,
+	SocialFeedFlickr,
 };
 
 export const components = {
 	accordion: Accordion,
 	hero_banner: HeroBanner,
 	menu: Menu,
+	social_feed_flickr: SocialFeedFlickr,
 };

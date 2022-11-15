@@ -133,7 +133,23 @@ interface HomepageDocumentData {
      *
      */
     title: prismicT.KeyTextField;
+    /**
+     * Slice Zone field in *Homepage*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: homepage.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<HomepageDocumentDataSlicesSlice>;
 }
+/**
+ * Slice for *Homepage → Slice Zone*
+ *
+ */
+type HomepageDocumentDataSlicesSlice = AccordionSlice | HeroBannerSlice | SocialFeedFlickrSlice;
 /**
  * Homepage document from Prismic
  *
@@ -534,11 +550,90 @@ type MenuSliceVariation = MenuSliceDefault | MenuSliceDropdown;
  *
  */
 export type MenuSlice = prismicT.SharedSlice<"menu", MenuSliceVariation>;
+/**
+ * Primary content in SocialFeedFlickr → Primary
+ *
+ */
+interface SocialFeedFlickrSliceDefaultPrimary {
+    /**
+     * Title field in *SocialFeedFlickr → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: social_feed_flickr.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Social Link Label field in *SocialFeedFlickr → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: social_feed_flickr.primary.social_link_label
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    social_link_label: prismicT.KeyTextField;
+    /**
+     * Social Link Url field in *SocialFeedFlickr → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: social_feed_flickr.primary.social_link_url
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    social_link_url: prismicT.LinkField;
+    /**
+     * Number Of Posts field in *SocialFeedFlickr → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: Number Of Posts to display
+     * - **API ID Path**: social_feed_flickr.primary.number_of_posts
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    number_of_posts: prismicT.NumberField;
+    /**
+     * Anchor ID field in *SocialFeedFlickr → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: example
+     * - **API ID Path**: social_feed_flickr.primary.anchor_id
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    anchor_id: prismicT.KeyTextField;
+}
+/**
+ * Default variation for SocialFeedFlickr Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `SocialFeedFlickr`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type SocialFeedFlickrSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<SocialFeedFlickrSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *SocialFeedFlickr*
+ *
+ */
+type SocialFeedFlickrSliceVariation = SocialFeedFlickrSliceDefault;
+/**
+ * SocialFeedFlickr Shared Slice
+ *
+ * - **API ID**: `social_feed_flickr`
+ * - **Description**: `SocialFeedFlickr`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type SocialFeedFlickrSlice = prismicT.SharedSlice<"social_feed_flickr", SocialFeedFlickrSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocumentDataInternalLinksItem, FooterDocumentDataSocialLinksItem, FooterDocumentDataSlicesSlice, FooterDocument, HomepageDocumentData, HomepageDocument, LandingPageDocumentData, LandingPageDocument, MenuDocumentData, MenuDocumentDataSlicesSlice, MenuDocument, AllDocumentTypes, AccordionSliceDefaultPrimary, AccordionSliceDefaultItem, AccordionSliceDefault, AccordionSliceVariation, AccordionSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefaultItem, HeroBannerSliceDefault, HeroBannerSliceWithoutCtaPrimary, HeroBannerSliceWithoutCta, HeroBannerSliceVariation, HeroBannerSlice, MenuSliceDefaultPrimary, MenuSliceDefault, MenuSliceDropdownPrimary, MenuSliceDropdownItem, MenuSliceDropdown, MenuSliceVariation, MenuSlice };
+        export type { FooterDocumentData, FooterDocumentDataInternalLinksItem, FooterDocumentDataSocialLinksItem, FooterDocumentDataSlicesSlice, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, LandingPageDocumentData, LandingPageDocument, MenuDocumentData, MenuDocumentDataSlicesSlice, MenuDocument, AllDocumentTypes, AccordionSliceDefaultPrimary, AccordionSliceDefaultItem, AccordionSliceDefault, AccordionSliceVariation, AccordionSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefaultItem, HeroBannerSliceDefault, HeroBannerSliceWithoutCtaPrimary, HeroBannerSliceWithoutCta, HeroBannerSliceVariation, HeroBannerSlice, MenuSliceDefaultPrimary, MenuSliceDefault, MenuSliceDropdownPrimary, MenuSliceDropdownItem, MenuSliceDropdown, MenuSliceVariation, MenuSlice, SocialFeedFlickrSliceDefaultPrimary, SocialFeedFlickrSliceDefault, SocialFeedFlickrSliceVariation, SocialFeedFlickrSlice };
     }
 }

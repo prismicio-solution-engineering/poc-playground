@@ -493,6 +493,107 @@
             "height": 500
           }
         }
+      },
+      "social_feed_flickr": {
+        "library": "slices",
+        "id": "social_feed_flickr",
+        "name": "SocialFeedFlickr",
+        "description": "SocialFeedFlickr",
+        "model": {
+          "id": "social_feed_flickr",
+          "type": "SharedSlice",
+          "name": "SocialFeedFlickr",
+          "description": "SocialFeedFlickr",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "SocialFeedFlickr",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading2,hyperlink"
+                  }
+                },
+                "social_link_label": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Social Link Label",
+                    "placeholder": ""
+                  }
+                },
+                "social_link_url": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Social Link Url",
+                    "placeholder": "",
+                    "allowTargetBlank": false,
+                    "select": null
+                  }
+                },
+                "number_of_posts": {
+                  "type": "Number",
+                  "config": {
+                    "label": "Number Of Posts",
+                    "placeholder": "Number Of Posts to display"
+                  }
+                },
+                "anchor_id": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Anchor ID",
+                    "placeholder": "example"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading2",
+                  "text": "Teach",
+                  "spans": []
+                }
+              ],
+              "social_link_label": "See more",
+              "social_link_url": {
+                "link_type": "Web",
+                "url": "http://google.com"
+              },
+              "number_of_posts": 10,
+              "anchor_id": "feet"
+            },
+            "slice_type": "social_feed_flickr"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/dianka/Documents/POC/prismic-poc/slices/SocialFeedFlickr/default/preview.png",
+            "width": 1248,
+            "height": 401
+          }
+        }
       }
     }
   }

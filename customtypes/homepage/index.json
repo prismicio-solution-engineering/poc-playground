@@ -11,6 +11,23 @@
           "label": "Title",
           "placeholder": ""
         }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "accordion": {
+              "type": "SharedSlice"
+            },
+            "hero_banner": {
+              "type": "SharedSlice"
+            },
+            "social_feed_flickr": {
+              "type": "SharedSlice"
+            }
+          }
+        }
       }
     }
   }

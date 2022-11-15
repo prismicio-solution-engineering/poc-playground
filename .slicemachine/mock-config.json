@@ -78,6 +78,24 @@
           }
         }
       }
+    },
+    "SocialFeedFlickr": {
+      "default": {
+        "primary": {
+          "number_of_posts": {
+            "content": 10
+          },
+          "social_link_label": {
+            "content": "See more"
+          },
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
     }
   }
 }
