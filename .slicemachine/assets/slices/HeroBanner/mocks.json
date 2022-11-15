@@ -16,21 +16,21 @@
       "title_top_line": [
         {
           "type": "heading1",
-          "text": "Current",
+          "text": "Applied",
           "spans": []
         }
       ],
       "title_bottom_line": [
         {
           "type": "heading1",
-          "text": "Actual",
+          "text": "Basis",
           "spans": []
         }
       ],
       "description": [
         {
           "type": "paragraph",
-          "text": "Minim ut eiusmod amet ipsum excepteur anim aute aliqua sint fugiat aliqua eu.",
+          "text": "Ipsum voluptate amet mollit culpa commodo voluptate incididunt proident minim.",
           "spans": []
         }
       ],
@@ -41,7 +41,7 @@
         },
         "alt": null,
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa"
+        "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0"
       }
     },
     "slice_type": "hero_banner"
@@ -56,21 +56,21 @@
       "title_top_line": [
         {
           "type": "heading1",
-          "text": "Factory",
+          "text": "Group",
           "spans": []
         }
       ],
       "title_bottom_line": [
         {
           "type": "heading1",
-          "text": "Shallow",
+          "text": "Would",
           "spans": []
         }
       ],
       "description": [
         {
           "type": "paragraph",
-          "text": "Velit do eu Lorem est elit tempor Lorem anim eu occaecat anim. Nostrud laborum exercitation magna nostrud aliquip adipisicing aliquip sit velit ipsum qui velit in laborum. Esse ipsum eu amet commodo eiusmod eiusmod Lorem minim adipisicing qui voluptate dolore ut ad.",
+          "text": "Commodo do consequat commodo veniam nostrud commodo. Aute nulla sunt enim adipisicing officia consectetur laboris incididunt id.",
           "spans": []
         }
       ],
@@ -81,7 +81,7 @@
         },
         "alt": null,
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88"
+        "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6"
       }
     },
     "slice_type": "hero_banner"
