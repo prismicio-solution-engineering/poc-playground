@@ -5,6 +5,24 @@
   "status": true,
   "json": {
     "Main": {
+      "logo": {
+        "type": "Image",
+        "config": {
+          "label": "Logo",
+          "constraint": {
+            "width": 32,
+            "height": 32
+          },
+          "thumbnails": []
+        }
+      },
+      "company_name": {
+        "type": "Text",
+        "config": {
+          "label": "Company name",
+          "placeholder": ""
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

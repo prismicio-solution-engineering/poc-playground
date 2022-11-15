@@ -8,10 +8,10 @@ import 'tailwindcss/tailwind.css';
 export default function App({ Component, pageProps }) {
   return (
     <PrismicProvider
-      internalLinkComponent={({ href, ...props }) => (
-        <Link href={href}>
-          <a {...props} />
-        </Link>
+    internalLinkComponent={({ href, locale, ...props }) => (
+      <Link href={href} locale={locale}>
+        <a {...props} />
+      </Link>
       )}
     >
       <PrismicPreview repositoryName={repositoryName}>

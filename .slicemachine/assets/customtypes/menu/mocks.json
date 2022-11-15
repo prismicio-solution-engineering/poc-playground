@@ -11,6 +11,16 @@
   "lang": "en-us",
   "alternate_languages": [],
   "data": {
+    "logo": {
+      "dimensions": {
+        "width": 32,
+        "height": 32
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef"
+    },
+    "company_name": "rising",
     "slices": []
   }
 }

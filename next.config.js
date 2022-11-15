@@ -1,7 +1,27 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-}
+const prismic = require("@prismicio/client");
 
-module.exports = nextConfig
+const sm = require("./sm.json");
+
+/** @type {import('next').NextConfig} */
+const nextConfig = async () => {
+  const client = prismic.createClient(sm.apiEndpoint);
+
+  const repository = await client.getRepository();
+  
+  const locales = repository.languages.map((lang) => lang.id);
+
+  return {
+    reactStrictMode: true,
+    i18n: {
+      locales,
+      defaultLocale: "en-us",
+      localeDetection: false,
+    },
+    images: {
+      loader: "imgix",
+      path: "",
+    },
+  };
+};
+
+module.exports = nextConfig;

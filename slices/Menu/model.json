@@ -11,23 +11,6 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Menu",
       "primary": {
-        "company_name": {
-          "type": "Text",
-          "config": {
-            "label": "Company name",
-            "placeholder": ""
-          }
-        },
-        "logo": {
-          "type": "Image",
-          "config": {
-            "label": "Logo",
-            "constraint": {
-              "height": 32
-            },
-            "thumbnails": []
-          }
-        },
         "label": {
           "type": "StructuredText",
           "config": {
@@ -56,23 +39,6 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Menu",
       "primary": {
-        "company_name": {
-          "type": "Text",
-          "config": {
-            "label": "Company name",
-            "placeholder": ""
-          }
-        },
-        "logo": {
-          "type": "Image",
-          "config": {
-            "label": "Logo",
-            "constraint": {
-              "height": 32
-            },
-            "thumbnails": []
-          }
-        },
         "dropdown_label": {
           "type": "StructuredText",
           "config": {

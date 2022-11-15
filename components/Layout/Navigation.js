@@ -14,13 +14,13 @@ function classNames(...classes) {
  * @typedef {import("@prismicio/react").SliceComponentProps<MenuSlice>} MenuProps
  * @param { MenuProps }
  */
-const Menu = ({ slice }) => {
+const Navigation = ({ slice }) => {
   const [open, setOpen] = useState(false);
 
   return (
     <div className="bg-white">
       {/* Mobile menu */}
-      {/* <Transition.Root show={open} as={Fragment}>
+      <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative z-40 lg:hidden" onClose={setOpen}>
           <Transition.Child
             as={Fragment}
@@ -56,8 +56,8 @@ const Menu = ({ slice }) => {
                   </button>
                 </div>
 
-                
-                <Tab.Group as="div" className="mt-2">
+                {/* Links */}
+                {/* <Tab.Group as="div" className="mt-2">
                   <div className="border-b border-gray-200" />
                   <div className="space-y-12 px-4 pt-10 pb-6">
                     <div className="grid grid-cols-1 items-start gap-y-10 gap-x-6">
@@ -111,11 +111,24 @@ const Menu = ({ slice }) => {
                     </div>
                   </div>
                 </Tab.Group>
+
+                {slice?.variation == "default" && (
+                  <div className="space-y-6 border-t border-gray-200 py-6 px-4">
+                    <div className="flow-root">
+                      <PrismicLink
+                        className="-m-2 block p-2 font-medium text-gray-900"
+                        field={slice.primary.link}
+                      >
+                        <PrismicRichText field={slice.primary.label} />
+                      </PrismicLink>
+                    </div>
+                  </div>
+                )} */}
               </Dialog.Panel>
             </Transition.Child>
           </div>
         </Dialog>
-      </Transition.Root> */}
+      </Transition.Root>
 
       <header className="relative">
         <nav aria-label="Top">
@@ -139,7 +152,7 @@ const Menu = ({ slice }) => {
                   <div className="hidden h-full lg:flex">
                     {/* Mega menus */}
                     <Popover.Group className="ml-8">
-                      <div className="flex h-full justify-center space-x-8">
+                      {/* <div className="flex h-full justify-center space-x-8">
                         {
                           slice?.variation == "dropdown" && (
                             <Popover className="flex">
@@ -235,7 +248,7 @@ const Menu = ({ slice }) => {
                             <PrismicRichText field={slice.primary.label} />
                           </PrismicLink>
                         )}
-                      </div>
+                      </div> */}
                     </Popover.Group>
                   </div>
 
@@ -270,4 +283,4 @@ const Menu = ({ slice }) => {
   );
 };
 
-export default Menu;
+export default Navigation;

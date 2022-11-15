@@ -121,7 +121,19 @@ type FooterDocumentDataSlicesSlice = WufooFormSlice;
  */
 export type FooterDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<FooterDocumentData>, "footer", Lang>;
 /** Content for Homepage documents */
-type HomepageDocumentData = Record<string, never>;
+interface HomepageDocumentData {
+    /**
+     * Title field in *Homepage*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: homepage.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+}
 /**
  * Homepage document from Prismic
  *
@@ -146,6 +158,28 @@ type LandingPageDocumentData = Record<string, never>;
 export type LandingPageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<LandingPageDocumentData>, "landing_page", Lang>;
 /** Content for Menu documents */
 interface MenuDocumentData {
+    /**
+     * Logo field in *Menu*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: menu.logo
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    logo: prismicT.ImageField<never>;
+    /**
+     * Company name field in *Menu*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: menu.company_name
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    company_name: prismicT.KeyTextField;
     /**
      * Slice Zone field in *Menu*
      *
@@ -179,26 +213,6 @@ export type AllDocumentTypes = FooterDocument | HomepageDocument | LandingPageDo
  *
  */
 interface MenuSliceDefaultPrimary {
-    /**
-     * Company name field in *Menu → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: menu.primary.company_name
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    company_name: prismicT.KeyTextField;
-    /**
-     * Logo field in *Menu → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: menu.primary.logo
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    logo: prismicT.ImageField<never>;
     /**
      * Label field in *Menu → Primary*
      *
@@ -234,26 +248,6 @@ export type MenuSliceDefault = prismicT.SharedSliceVariation<"default", Simplify
  *
  */
 interface MenuSliceDropdownPrimary {
-    /**
-     * Company name field in *Menu → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: menu.primary.company_name
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    company_name: prismicT.KeyTextField;
-    /**
-     * Logo field in *Menu → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: menu.primary.logo
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    logo: prismicT.ImageField<never>;
     /**
      * Dropdown label field in *Menu → Primary*
      *
