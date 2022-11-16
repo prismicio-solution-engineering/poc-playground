@@ -42,13 +42,6 @@
             "label": "Number Of Posts",
             "placeholder": "Number Of Posts to display"
           }
-        },
-        "anchor_id": {
-          "type": "Text",
-          "config": {
-            "label": "Anchor ID",
-            "placeholder": "example"
-          }
         }
       },
       "items": {},

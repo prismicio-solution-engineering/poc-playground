@@ -543,13 +543,6 @@
                     "label": "Number Of Posts",
                     "placeholder": "Number Of Posts to display"
                   }
-                },
-                "anchor_id": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Anchor ID",
-                    "placeholder": "example"
-                  }
                 }
               },
               "items": {},
@@ -568,17 +561,16 @@
               "title": [
                 {
                   "type": "heading2",
-                  "text": "Teach",
+                  "text": "Chest",
                   "spans": []
                 }
               ],
               "social_link_label": "See more",
               "social_link_url": {
                 "link_type": "Web",
-                "url": "http://google.com"
+                "url": "http://twitter.com"
               },
-              "number_of_posts": 10,
-              "anchor_id": "feet"
+              "number_of_posts": 10
             },
             "slice_type": "social_feed_flickr"
           }

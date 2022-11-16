@@ -595,16 +595,6 @@ interface SocialFeedFlickrSliceDefaultPrimary {
      *
      */
     number_of_posts: prismicT.NumberField;
-    /**
-     * Anchor ID field in *SocialFeedFlickr → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: example
-     * - **API ID Path**: social_feed_flickr.primary.anchor_id
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    anchor_id: prismicT.KeyTextField;
 }
 /**
  * Default variation for SocialFeedFlickr Slice
