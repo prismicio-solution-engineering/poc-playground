@@ -8,7 +8,7 @@ import { PrismicLink, PrismicRichText } from "@prismicio/react";
  */
 const HeroBanner = ({ slice }) => (
   <section>
-    <div className="relative overflow-hidden bg-white mb-6">
+    <div className="relative mb-6 overflow-hidden bg-white">
       <div className="mx-auto max-w-7xl">
         <div className="relative z-10 bg-white pb-8 sm:pb-16 md:pb-20 lg:w-full lg:max-w-2xl lg:pb-28 xl:pb-32">
           <svg
@@ -36,9 +36,9 @@ const HeroBanner = ({ slice }) => (
                 <PrismicRichText field={slice.primary.description} />
               </div>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                {slice.variation == "default" && (
-                  <div className="mt-3 rounded-md shadow sm:mt-0 sm:mr-3">
-                    {slice?.items?.map((item, idx) => (
+                {slice.variation == "default" &&
+                  slice?.items?.map((item, idx) => (
+                    <div className="mt-3 rounded-md shadow sm:mt-0 sm:mr-3">
                       <PrismicLink
                         key={idx}
                         className={
@@ -47,10 +47,11 @@ const HeroBanner = ({ slice }) => (
                             : "flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-100 px-8 py-3 text-base font-medium text-indigo-700 hover:bg-indigo-200 md:py-4 md:px-10 md:text-lg"
                         }
                         field={item.cta_link}
-                      ></PrismicLink>
-                    ))}
-                  </div>
-                )}
+                      >
+                        {item.cta_type}
+                      </PrismicLink>
+                    </div>
+                  ))}
               </div>
             </div>
           </main>
@@ -59,7 +60,8 @@ const HeroBanner = ({ slice }) => (
       <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <img
           className="h-56 w-full object-cover sm:h-72 md:h-96 lg:h-full lg:w-full"
-          src={slice.primary.image.url} alt={slice.primary.image.alt}
+          src={slice.primary.image.url}
+          alt={slice.primary.image.alt}
         />
       </div>
     </div>
