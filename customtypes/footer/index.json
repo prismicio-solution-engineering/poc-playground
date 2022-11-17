@@ -70,11 +70,7 @@
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
-          "choices": {
-            "wufoo_form": {
-              "type": "SharedSlice"
-            }
-          }
+          "choices": {}
         }
       }
     }
