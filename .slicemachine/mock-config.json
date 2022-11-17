@@ -164,6 +164,13 @@
             }
           }
         }
+      },
+      "withImage": {
+        "primary": {
+          "image_position": {
+            "content": false
+          }
+        }
       }
     }
   }

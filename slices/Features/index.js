@@ -29,7 +29,6 @@ const Features = ({ slice }) => (
                   className="relative flex flex-col gap-6 sm:flex-row md:flex-col lg:flex-row"
                 >
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500 text-white sm:shrink-0">
-                    {/* <feature.icon className="h-8 w-8" aria-hidden="true" /> */}
                     <img
                       src={item.feature_icon.url}
                       alt={item.feature_icon.alt}
@@ -52,7 +51,7 @@ const Features = ({ slice }) => (
     ) : (
       <div className="overflow-hidden bg-gray-50 py-16 lg:py-24">
         <div className="relative mx-auto max-w-xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-          {slice.variation == "withRightImage" && (
+          {slice.primary.image_position && (
             <svg
               className="absolute left-full hidden -translate-x-1/2 -translate-y-1/4 transform lg:block"
               width={404}
@@ -98,8 +97,8 @@ const Features = ({ slice }) => (
             </div>
           </div>
 
-          {/* Right Image */}
-          {slice.variation == "withRightImage" && (
+          {slice.primary.image_position ?
+          // Right Image
             <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8">
               <div className="relative">
                 <div className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
@@ -114,7 +113,6 @@ const Features = ({ slice }) => (
                     <div key={idx} className="relative">
                       <dt>
                         <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-indigo-500 text-white">
-                          {/* <item.icon className="h-6 w-6" aria-hidden="true" /> */}
                           <img
                             src={item.feature_icon.url}
                             alt={item.feature_icon.alt}
@@ -141,11 +139,8 @@ const Features = ({ slice }) => (
                 />
               </div>
             </div>
-          )}
-
-          {/* Left Image */}
-
-          {slice.variation == "withLeftImage" && (
+          :
+          // Left Image          
             <>
               <svg
                 className="absolute right-full hidden translate-x-1/2 translate-y-12 transform lg:block"
@@ -197,7 +192,6 @@ const Features = ({ slice }) => (
                         <div key={idx} className="relative">
                           <dt>
                             <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-indigo-500 text-white">
-                              {/* <item.icon className="h-6 w-6" aria-hidden="true" /> */}
                               <img
                                 src={item.feature_icon.url}
                                 alt={item.feature_icon.alt}
@@ -226,7 +220,7 @@ const Features = ({ slice }) => (
                 </div>
               </div>
             </>
-          )}
+          }
         </div>
       </div>
     )}
