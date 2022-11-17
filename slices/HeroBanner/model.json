@@ -129,6 +129,100 @@
       },
       "items": {},
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    },
+    {
+      "id": "withSignUpAndMedia",
+      "name": "With sign up and media",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "HeroBanner",
+      "primary": {
+        "title_top_line": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title Top line",
+            "placeholder": "Top line content",
+            "allowTargetBlank": true,
+            "single": "heading1"
+          }
+        },
+        "title_bottom_line": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title Bottom Line",
+            "placeholder": "Bottom line content",
+            "allowTargetBlank": true,
+            "single": "heading1"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "A nice description of your feature",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "form_label": {
+          "type": "Text",
+          "config": {
+            "label": "Form Label",
+            "placeholder": ""
+          }
+        },
+        "form_top_message": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Form top message",
+            "placeholder": "Sign up to get ...",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "form_placeholder": {
+          "type": "Text",
+          "config": {
+            "label": "Form placeholder",
+            "placeholder": "Field placeholder"
+          }
+        },
+        "form_cta_label": {
+          "type": "Text",
+          "config": {
+            "label": "Form Cta Label",
+            "placeholder": ""
+          }
+        },
+        "privacy_message": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Privacy message",
+            "placeholder": "Your data is safe with us...",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item,rtl"
+          }
+        },
+        "media_thumbnail": {
+          "type": "Image",
+          "config": {
+            "label": "Media Thumbnail",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "show_play_video_button": {
+          "type": "Boolean",
+          "config": {
+            "label": "Show play video button",
+            "placeholder_false": "Hide",
+            "placeholder_true": "Show",
+            "default_value": true
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]
 }

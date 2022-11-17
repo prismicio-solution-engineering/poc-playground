@@ -381,208 +381,6 @@ export type FeaturesSliceDefault = prismicT.SharedSliceVariation<"default", Simp
  * Primary content in Features → Primary
  *
  */
-interface FeaturesSliceWithRightImagePrimary {
-    /**
-     * Title field in *Features → Primary*
-     *
-     * - **Field Type**: Title
-     * - **Placeholder**: Ignore to not show the section
-     * - **API ID Path**: features.primary.title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    title: prismicT.TitleField;
-    /**
-     * Description field in *Features → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: Ignore to not show the section
-     * - **API ID Path**: features.primary.description
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    description: prismicT.RichTextField;
-    /**
-     * Section Title field in *Features → Primary*
-     *
-     * - **Field Type**: Title
-     * - **Placeholder**: *None*
-     * - **API ID Path**: features.primary.section_title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    section_title: prismicT.TitleField;
-    /**
-     * Section description field in *Features → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: features.primary.section_description
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    section_description: prismicT.RichTextField;
-    /**
-     * Section Image field in *Features → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: features.primary.section_image
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    section_image: prismicT.ImageField<never>;
-}
-/**
- * Item in Features → Items
- *
- */
-export interface FeaturesSliceWithRightImageItem {
-    /**
-     * Feature Title field in *Features → Items*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: features.items[].feature_title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    feature_title: prismicT.RichTextField;
-    /**
-     * Feature Description field in *Features → Items*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: features.items[].feature_description
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    feature_description: prismicT.RichTextField;
-    /**
-     * Feature Icon field in *Features → Items*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: features.items[].feature_icon
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    feature_icon: prismicT.ImageField<never>;
-}
-/**
- * With right image variation for Features Slice
- *
- * - **API ID**: `withRightImage`
- * - **Description**: `Features`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type FeaturesSliceWithRightImage = prismicT.SharedSliceVariation<"withRightImage", Simplify<FeaturesSliceWithRightImagePrimary>, Simplify<FeaturesSliceWithRightImageItem>>;
-/**
- * Primary content in Features → Primary
- *
- */
-interface FeaturesSliceWithLeftImagePrimary {
-    /**
-     * Title field in *Features → Primary*
-     *
-     * - **Field Type**: Title
-     * - **Placeholder**: Ignore to not show the section
-     * - **API ID Path**: features.primary.title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    title: prismicT.TitleField;
-    /**
-     * Description field in *Features → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: Ignore to not show the section
-     * - **API ID Path**: features.primary.description
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    description: prismicT.RichTextField;
-    /**
-     * Section Title field in *Features → Primary*
-     *
-     * - **Field Type**: Title
-     * - **Placeholder**: *None*
-     * - **API ID Path**: features.primary.section_title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    section_title: prismicT.TitleField;
-    /**
-     * Section description field in *Features → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: features.primary.section_description
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    section_description: prismicT.RichTextField;
-    /**
-     * Section Image field in *Features → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: features.primary.section_image
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    section_image: prismicT.ImageField<never>;
-}
-/**
- * Item in Features → Items
- *
- */
-export interface FeaturesSliceWithLeftImageItem {
-    /**
-     * Feature Title field in *Features → Items*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: features.items[].feature_title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    feature_title: prismicT.RichTextField;
-    /**
-     * Feature Description field in *Features → Items*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: features.items[].feature_description
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    feature_description: prismicT.RichTextField;
-    /**
-     * Feature Icon field in *Features → Items*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: features.items[].feature_icon
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    feature_icon: prismicT.ImageField<never>;
-}
-/**
- * With left image variation for Features Slice
- *
- * - **API ID**: `withLeftImage`
- * - **Description**: `Features`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type FeaturesSliceWithLeftImage = prismicT.SharedSliceVariation<"withLeftImage", Simplify<FeaturesSliceWithLeftImagePrimary>, Simplify<FeaturesSliceWithLeftImageItem>>;
-/**
- * Primary content in Features → Primary
- *
- */
 interface FeaturesSliceWithImagePrimary {
     /**
      * Title field in *Features → Primary*
@@ -695,7 +493,7 @@ export type FeaturesSliceWithImage = prismicT.SharedSliceVariation<"withImage", 
  * Slice variation for *Features*
  *
  */
-type FeaturesSliceVariation = FeaturesSliceDefault | FeaturesSliceWithRightImage | FeaturesSliceWithLeftImage | FeaturesSliceWithImage;
+type FeaturesSliceVariation = FeaturesSliceDefault | FeaturesSliceWithImage;
 /**
  * Features Shared Slice
  *
@@ -853,10 +651,126 @@ interface HeroBannerSliceWithoutCtaPrimary {
  */
 export type HeroBannerSliceWithoutCta = prismicT.SharedSliceVariation<"withoutCta", Simplify<HeroBannerSliceWithoutCtaPrimary>, never>;
 /**
+ * Primary content in HeroBanner → Primary
+ *
+ */
+interface HeroBannerSliceWithSignUpAndMediaPrimary {
+    /**
+     * Title Top line field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: Top line content
+     * - **API ID Path**: hero_banner.primary.title_top_line
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title_top_line: prismicT.TitleField;
+    /**
+     * Title Bottom Line field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: Bottom line content
+     * - **API ID Path**: hero_banner.primary.title_bottom_line
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title_bottom_line: prismicT.TitleField;
+    /**
+     * Description field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: hero_banner.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * Form Label field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero_banner.primary.form_label
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    form_label: prismicT.KeyTextField;
+    /**
+     * Form top message field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: Sign up to get ...
+     * - **API ID Path**: hero_banner.primary.form_top_message
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    form_top_message: prismicT.RichTextField;
+    /**
+     * Form placeholder field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: Field placeholder
+     * - **API ID Path**: hero_banner.primary.form_placeholder
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    form_placeholder: prismicT.KeyTextField;
+    /**
+     * Form Cta Label field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero_banner.primary.form_cta_label
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    form_cta_label: prismicT.KeyTextField;
+    /**
+     * Privacy message field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: Your data is safe with us...
+     * - **API ID Path**: hero_banner.primary.privacy_message
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    privacy_message: prismicT.RichTextField;
+    /**
+     * Media Thumbnail field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero_banner.primary.media_thumbnail
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    media_thumbnail: prismicT.ImageField<never>;
+    /**
+     * Show play video button field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: true
+     * - **API ID Path**: hero_banner.primary.show_play_video_button
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    show_play_video_button: prismicT.BooleanField;
+}
+/**
+ * With sign up and media variation for HeroBanner Slice
+ *
+ * - **API ID**: `withSignUpAndMedia`
+ * - **Description**: `HeroBanner`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HeroBannerSliceWithSignUpAndMedia = prismicT.SharedSliceVariation<"withSignUpAndMedia", Simplify<HeroBannerSliceWithSignUpAndMediaPrimary>, never>;
+/**
  * Slice variation for *HeroBanner*
  *
  */
-type HeroBannerSliceVariation = HeroBannerSliceDefault | HeroBannerSliceWithoutCta;
+type HeroBannerSliceVariation = HeroBannerSliceDefault | HeroBannerSliceWithoutCta | HeroBannerSliceWithSignUpAndMedia;
 /**
  * HeroBanner Shared Slice
  *
@@ -1040,6 +954,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocumentDataInternalLinksItem, FooterDocumentDataSocialLinksItem, FooterDocumentDataSlicesSlice, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, LandingPageDocumentData, LandingPageDocumentDataSlicesSlice, LandingPageDocument, MenuDocumentData, MenuDocumentDataSlicesSlice, MenuDocument, AllDocumentTypes, AccordionSliceDefaultPrimary, AccordionSliceDefaultItem, AccordionSliceDefault, AccordionSliceVariation, AccordionSlice, FeaturesSliceDefaultPrimary, FeaturesSliceDefaultItem, FeaturesSliceDefault, FeaturesSliceWithRightImagePrimary, FeaturesSliceWithRightImageItem, FeaturesSliceWithRightImage, FeaturesSliceWithLeftImagePrimary, FeaturesSliceWithLeftImageItem, FeaturesSliceWithLeftImage, FeaturesSliceWithImagePrimary, FeaturesSliceWithImageItem, FeaturesSliceWithImage, FeaturesSliceVariation, FeaturesSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefaultItem, HeroBannerSliceDefault, HeroBannerSliceWithoutCtaPrimary, HeroBannerSliceWithoutCta, HeroBannerSliceVariation, HeroBannerSlice, MenuSliceDefaultPrimary, MenuSliceDefault, MenuSliceDropdownPrimary, MenuSliceDropdownItem, MenuSliceDropdown, MenuSliceVariation, MenuSlice, SocialFeedFlickrSliceDefaultPrimary, SocialFeedFlickrSliceDefault, SocialFeedFlickrSliceVariation, SocialFeedFlickrSlice };
+        export type { FooterDocumentData, FooterDocumentDataInternalLinksItem, FooterDocumentDataSocialLinksItem, FooterDocumentDataSlicesSlice, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, LandingPageDocumentData, LandingPageDocumentDataSlicesSlice, LandingPageDocument, MenuDocumentData, MenuDocumentDataSlicesSlice, MenuDocument, AllDocumentTypes, AccordionSliceDefaultPrimary, AccordionSliceDefaultItem, AccordionSliceDefault, AccordionSliceVariation, AccordionSlice, FeaturesSliceDefaultPrimary, FeaturesSliceDefaultItem, FeaturesSliceDefault, FeaturesSliceWithImagePrimary, FeaturesSliceWithImageItem, FeaturesSliceWithImage, FeaturesSliceVariation, FeaturesSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefaultItem, HeroBannerSliceDefault, HeroBannerSliceWithoutCtaPrimary, HeroBannerSliceWithoutCta, HeroBannerSliceWithSignUpAndMediaPrimary, HeroBannerSliceWithSignUpAndMedia, HeroBannerSliceVariation, HeroBannerSlice, MenuSliceDefaultPrimary, MenuSliceDefault, MenuSliceDropdownPrimary, MenuSliceDropdownItem, MenuSliceDropdown, MenuSliceVariation, MenuSlice, SocialFeedFlickrSliceDefaultPrimary, SocialFeedFlickrSliceDefault, SocialFeedFlickrSliceVariation, SocialFeedFlickrSlice };
     }
 }

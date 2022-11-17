@@ -52,6 +52,31 @@
       "withoutCta": {
         "items": {},
         "primary": {}
+      },
+      "withSignUpAndMedia": {
+        "primary": {
+          "form_top_message": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "privacy_message": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "form_cta_label": {
+            "content": "Sign up"
+          },
+          "form_placeholder": {
+            "content": "Enter your email"
+          },
+          "show_play_video_button": {
+            "content": true
+          }
+        }
       }
     },
     "Accordion": {
