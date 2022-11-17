@@ -25,6 +25,9 @@
             },
             "social_feed_flickr": {
               "type": "SharedSlice"
+            },
+            "features": {
+              "type": "SharedSlice"
             }
           }
         }
