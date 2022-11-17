@@ -38,9 +38,8 @@ const HeroBanner = ({ slice }) => (
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 {slice.variation == "default" &&
                   slice?.items?.map((item, idx) => (
-                    <div className="mt-3 rounded-md shadow sm:mt-0 sm:mr-3">
+                    <div key={idx} className="mt-3 rounded-md shadow sm:mt-0 sm:mr-3">
                       <PrismicLink
-                        key={idx}
                         className={
                           item.cta_type == "Primary"
                             ? "flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:py-4 md:px-10 md:text-lg"

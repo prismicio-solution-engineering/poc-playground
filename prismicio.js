@@ -14,6 +14,10 @@ const routes = [
         type: 'homepage',
         path: '/',
     },
+    {
+        type: 'landing_page',
+        path: '/:uid',
+    },
 ]
 
 /**

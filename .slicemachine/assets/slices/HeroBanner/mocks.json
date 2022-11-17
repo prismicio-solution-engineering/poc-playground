@@ -7,7 +7,7 @@
         "cta_label": "Click here",
         "cta_link": {
           "link_type": "Web",
-          "url": "https://slicemachine.dev"
+          "url": "http://google.com"
         },
         "cta_type": "Primary"
       }
@@ -16,21 +16,21 @@
       "title_top_line": [
         {
           "type": "heading1",
-          "text": "Applied",
+          "text": "Atmosphere",
           "spans": []
         }
       ],
       "title_bottom_line": [
         {
           "type": "heading1",
-          "text": "Basis",
+          "text": "Upward",
           "spans": []
         }
       ],
       "description": [
         {
           "type": "paragraph",
-          "text": "Ipsum voluptate amet mollit culpa commodo voluptate incididunt proident minim.",
+          "text": "Ex voluptate non ullamco reprehenderit nulla dolor tempor laborum. Cillum adipisicing et voluptate sint nulla ullamco sint enim ipsum culpa eu.",
           "spans": []
         }
       ],
@@ -41,7 +41,7 @@
         },
         "alt": null,
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0"
+        "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb"
       }
     },
     "slice_type": "hero_banner"
@@ -56,32 +56,32 @@
       "title_top_line": [
         {
           "type": "heading1",
-          "text": "Group",
+          "text": "Mental",
           "spans": []
         }
       ],
       "title_bottom_line": [
         {
           "type": "heading1",
-          "text": "Would",
+          "text": "Fight",
           "spans": []
         }
       ],
       "description": [
         {
           "type": "paragraph",
-          "text": "Commodo do consequat commodo veniam nostrud commodo. Aute nulla sunt enim adipisicing officia consectetur laboris incididunt id.",
+          "text": "Elit excepteur quis laborum non anim duis aute tempor amet laboris ut officia ea. Dolore esse ex eu cupidatat fugiat ullamco et proident consectetur excepteur labore ad dolore proident. Voluptate do elit ipsum eu.",
           "spans": []
         }
       ],
       "image": {
         "dimensions": {
-          "width": 900,
-          "height": 500
+          "width": 640,
+          "height": 554
         },
         "alt": null,
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6"
+        "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468"
       }
     },
     "slice_type": "hero_banner"

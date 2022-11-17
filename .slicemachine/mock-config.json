@@ -50,7 +50,8 @@
         }
       },
       "withoutCta": {
-        "items": {}
+        "items": {},
+        "primary": {}
       }
     },
     "Accordion": {
