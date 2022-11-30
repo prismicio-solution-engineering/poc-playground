@@ -9,8 +9,8 @@ const __allComponents = { ...components }
 export default function Home({ doc, menu, footer, flickrData }) {
   return (
     <div>
-      <Layout currentLocale={doc.lang} altLangs={doc.alternate_languages} menu={menu} footer={footer}>
-        <SliceZone slices={doc.data.slices} components={__allComponents} context={{ flickrData: flickrData }} />
+      <Layout currentLocale={doc?.lang} altLangs={doc?.alternate_languages} menu={menu} footer={footer}>
+        <SliceZone slices={doc?.data.slices} components={__allComponents} context={{ flickrData: flickrData }} />
       </Layout>
     </div>
   )
