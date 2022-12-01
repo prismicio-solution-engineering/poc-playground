@@ -98,7 +98,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/slices/Accordion/default/preview.png",
+            "path": "C:\\Users\\diank\\OneDrive\\PC\\Documents\\1 Travail\\Jobs\\Prismic\\Formation\\repos\\prismic-poc\\slices\\Accordion\\default\\preview.png",
             "width": 2554,
             "height": 1204
           }
@@ -542,12 +542,12 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/.slicemachine/assets/slices/Features/default/preview.png",
+            "path": "C:\\Users\\diank\\OneDrive\\PC\\Documents\\1 Travail\\Jobs\\Prismic\\Formation\\repos\\prismic-poc\\.slicemachine\\assets\\slices\\Features\\default\\preview.png",
             "width": 1280,
             "height": 800
           },
           "withImage": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/slices/Features/withImage/preview.png",
+            "path": "C:\\Users\\diank\\OneDrive\\PC\\Documents\\1 Travail\\Jobs\\Prismic\\Formation\\repos\\prismic-poc\\slices\\Features\\withImage\\preview.png",
             "width": 1276,
             "height": 874
           }
@@ -939,17 +939,17 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/.slicemachine/assets/slices/HeroBanner/default/preview.png",
+            "path": "C:\\Users\\diank\\OneDrive\\PC\\Documents\\1 Travail\\Jobs\\Prismic\\Formation\\repos\\prismic-poc\\.slicemachine\\assets\\slices\\HeroBanner\\default\\preview.png",
             "width": 1280,
             "height": 582
           },
           "withoutCta": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/.slicemachine/assets/slices/HeroBanner/withoutCta/preview.png",
+            "path": "C:\\Users\\diank\\OneDrive\\PC\\Documents\\1 Travail\\Jobs\\Prismic\\Formation\\repos\\prismic-poc\\.slicemachine\\assets\\slices\\HeroBanner\\withoutCta\\preview.png",
             "width": 1280,
             "height": 548
           },
           "withSignUpAndMedia": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/slices/HeroBanner/withSignUpAndMedia/preview.png",
+            "path": "C:\\Users\\diank\\OneDrive\\PC\\Documents\\1 Travail\\Jobs\\Prismic\\Formation\\repos\\prismic-poc\\slices\\HeroBanner\\withSignUpAndMedia\\preview.png",
             "width": 1280,
             "height": 729
           }
@@ -1092,12 +1092,12 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/.slicemachine/assets/slices/Menu/default/preview.png",
+            "path": "C:\\Users\\diank\\OneDrive\\PC\\Documents\\1 Travail\\Jobs\\Prismic\\Formation\\repos\\prismic-poc\\.slicemachine\\assets\\slices\\Menu\\default\\preview.png",
             "width": 1280,
             "height": 400
           },
           "dropdown": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/.slicemachine/assets/slices/Menu/dropdown/preview.png",
+            "path": "C:\\Users\\diank\\OneDrive\\PC\\Documents\\1 Travail\\Jobs\\Prismic\\Formation\\repos\\prismic-poc\\.slicemachine\\assets\\slices\\Menu\\dropdown\\preview.png",
             "width": 1280,
             "height": 500
           }
@@ -1190,7 +1190,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/slices/SocialFeedFlickr/default/preview.png",
+            "path": "C:\\Users\\diank\\OneDrive\\PC\\Documents\\1 Travail\\Jobs\\Prismic\\Formation\\repos\\prismic-poc\\slices\\SocialFeedFlickr\\default\\preview.png",
             "width": 1248,
             "height": 401
           }
