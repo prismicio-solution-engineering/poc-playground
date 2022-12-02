@@ -103,7 +103,13 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-const NavigationFlyout = ({ menu, currentLocale, altLangs }) => {
+const NavigationFlyout = ({
+  menu,
+  currentLocale,
+  altLangs,
+  locales,
+  alternatesUrls,
+}) => {
   return (
     <Popover className="relative bg-white">
       <div className="mx-auto px-4 sm:px-6">
@@ -137,9 +143,7 @@ const NavigationFlyout = ({ menu, currentLocale, altLangs }) => {
                             "group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                           )}
                         >
-                          <PrismicRichText
-                            field={slice.primary.label}
-                          />
+                          <PrismicRichText field={slice.primary.label} />
                           <ChevronDownIcon
                             className={classNames(
                               open ? "text-gray-600" : "text-gray-400",
@@ -191,14 +195,11 @@ const NavigationFlyout = ({ menu, currentLocale, altLangs }) => {
                   </Popover>
                 </div>
               ) : (
-                <div
-                  key={idx}
-                  className="text-base font-medium text-gray-500 hover:text-gray-900"
-                >
-                  <PrismicLink field={slice.primary.link}>
+
+                  <PrismicLink field={slice.primary.link} key={idx}
+                  className="text-base font-medium text-gray-500 hover:text-gray-900">
                     <PrismicRichText field={slice.primary.label} />
                   </PrismicLink>
-                </div>
               );
             })}
           </Popover.Group>
@@ -207,6 +208,8 @@ const NavigationFlyout = ({ menu, currentLocale, altLangs }) => {
             <LanguageSwitcher
               currentLocale={currentLocale}
               altLangs={altLangs}
+              locales={locales}
+              alternatesUrls={alternatesUrls}
             />
           </div>
         </div>
@@ -243,18 +246,40 @@ const NavigationFlyout = ({ menu, currentLocale, altLangs }) => {
                 </div>
               </div>
               <div className="mt-6">
-                <nav className="grid gap-y-8">
-                  {solutions.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
-                    >
-                      <span className="ml-3 text-base font-medium text-gray-900">
-                        {item.name}
-                      </span>
-                    </a>
-                  ))}
+                <nav className="grid gap-y-3">
+                  {menu?.data?.slices.map((slice, idx) => {
+                    return slice.variation === "dropdown" ? (
+                      <div key={idx} className="py-3 grid gap-y-3">
+                        <div className="font-semibold text-indigo-500">
+                          <PrismicRichText field={slice.primary.label} />
+                        </div>
+                        {slice?.items?.map((item, idx) => {
+                          return(
+                          <PrismicLink
+                            key={idx}
+                            field={item.second_level_link}
+                            className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
+                          >
+                            <div className="ml-3 text-base font-medium text-gray-900">
+                              <PrismicRichText
+                                field={item.second_level_label}
+                              />
+                            </div>
+                          </PrismicLink>
+                        )})}
+                      </div>
+                    ) : (
+                      <PrismicLink
+                        field={slice.primary.link}
+                        key={idx}
+                        className="-m-3 flex items-center rounded-md py-3 hover:bg-gray-50"
+                      >
+                        <div className="ml-3 text-base font-medium text-gray-900">
+                          <PrismicRichText field={slice.primary.label} />
+                        </div>
+                      </PrismicLink>
+                    );
+                  })}
                 </nav>
               </div>
             </div>
@@ -264,6 +289,8 @@ const NavigationFlyout = ({ menu, currentLocale, altLangs }) => {
                 <LanguageSwitcher
                   currentLocale={currentLocale}
                   altLangs={altLangs}
+                  locales={locales}
+                  alternatesUrls={alternatesUrls}
                 />
               </div>
             </div>
