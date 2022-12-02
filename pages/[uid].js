@@ -41,6 +41,26 @@ export async function getStaticProps({ params, previewData, locale }) {
     return null
   }));
 
+
+  //Querying page
+  // const document = (await client.getSingle('home-page', { lang: locale }).catch(e => {
+  //   return null
+  // }));
+  // if (!document) {
+  //   return {
+  //     notFound: true,
+  //   }
+  // }
+
+  // const altLangsGraphQuery = `{
+  //   homepage{
+  //     meta_title
+  //   }
+  // }`
+
+  // const alternates = await client.getByIDs(document.alternate_languages.map(doc => doc.id),{graphQuery:altLangsGraphQuery ,lang: "*"})
+  // console.log(alternates.results.map(doc => ({lang: doc.lang, url : doc.url})))
+
   return {
     props: {
       doc,
