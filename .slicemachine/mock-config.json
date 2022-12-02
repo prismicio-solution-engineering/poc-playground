@@ -218,9 +218,22 @@
         }
       },
       "dropdown": {
-        "primary": {},
+        "primary": {
+          "label": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
         "items": {
           "second_level_label": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "second_level_description": {
             "config": {
               "patternType": "PARAGRAPH",
               "blocks": 1

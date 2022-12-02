@@ -23,7 +23,7 @@ export const LanguageSwitcher = ({ currentLocale, altLangs = []}) => {
 
   return (
     <div className="ml-auto flex items-center">
-      <div className="hidden lg:ml-8 lg:flex">
+      <div className="lg:ml-8 lg:flex">
         <a className="flex items-center text-gray-700 hover:text-gray-800">
           <select
             id="location"

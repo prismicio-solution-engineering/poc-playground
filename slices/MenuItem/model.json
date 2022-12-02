@@ -39,17 +39,25 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Menu",
       "primary": {
-        "dropdown_label": {
+        "label": {
           "type": "StructuredText",
           "config": {
             "label": "Dropdown label",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "single": "paragraph"
           }
         }
       },
       "items": {
+        "second_level_link": {
+          "type": "Link",
+          "config": {
+            "label": "Second level link",
+            "placeholder": "",
+            "select": null
+          }
+        },
         "second_level_label": {
           "type": "StructuredText",
           "config": {
@@ -59,32 +67,13 @@
             "single": "paragraph"
           }
         },
-        "second_level_link": {
-          "type": "Link",
-          "config": {
-            "label": "Second level link",
-            "placeholder": "",
-            "select": null
-          }
-        },
         "second_level_description": {
           "type": "StructuredText",
           "config": {
             "label": "Second level description",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-          }
-        },
-        "second_level_icon": {
-          "type": "Image",
-          "config": {
-            "label": "Second level icon",
-            "constraint": {
-              "width": 24,
-              "height": 24
-            },
-            "thumbnails": []
+            "single": "paragraph"
           }
         }
       },

@@ -6,12 +6,13 @@ import {
   Bars3Icon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-const Navigation = ({ menu }) => {
+const Navigation = ({ menu, currentLocale, altLangs }) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -264,6 +265,12 @@ const Navigation = ({ menu }) => {
                         })}
                       </div>
                     </Popover.Group>
+                    <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
+            <LanguageSwitcher
+              currentLocale={currentLocale}
+              altLangs={altLangs}
+            />
+          </div>
                   </div>
 
                   {/* Mobile menu and search (lg-) */}

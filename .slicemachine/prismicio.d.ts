@@ -809,27 +809,17 @@ interface MenuSliceDropdownPrimary {
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: menu.primary.dropdown_label
+     * - **API ID Path**: menu.primary.label
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    dropdown_label: prismicT.RichTextField;
+    label: prismicT.RichTextField;
 }
 /**
  * Item in MenuItem → Items
  *
  */
 export interface MenuSliceDropdownItem {
-    /**
-     * Second level label field in *MenuItem → Items*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: menu.items[].second_level_label
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    second_level_label: prismicT.RichTextField;
     /**
      * Second level link field in *MenuItem → Items*
      *
@@ -841,6 +831,16 @@ export interface MenuSliceDropdownItem {
      */
     second_level_link: prismicT.LinkField;
     /**
+     * Second level label field in *MenuItem → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: menu.items[].second_level_label
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    second_level_label: prismicT.RichTextField;
+    /**
      * Second level description field in *MenuItem → Items*
      *
      * - **Field Type**: Rich Text
@@ -850,16 +850,6 @@ export interface MenuSliceDropdownItem {
      *
      */
     second_level_description: prismicT.RichTextField;
-    /**
-     * Second level icon field in *MenuItem → Items*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: menu.items[].second_level_icon
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    second_level_icon: prismicT.ImageField<never>;
 }
 /**
  * Dropdown variation for MenuItem Slice
