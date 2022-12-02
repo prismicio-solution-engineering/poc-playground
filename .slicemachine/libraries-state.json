@@ -98,7 +98,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "C:\\Users\\diank\\OneDrive\\PC\\Documents\\1 Travail\\Jobs\\Prismic\\Formation\\repos\\prismic-poc\\slices\\Accordion\\default\\preview.png",
+            "path": "/Users/dianka/Documents/POC/prismic-poc/slices/Accordion/default/preview.png",
             "width": 2554,
             "height": 1204
           }
@@ -542,12 +542,12 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "C:\\Users\\diank\\OneDrive\\PC\\Documents\\1 Travail\\Jobs\\Prismic\\Formation\\repos\\prismic-poc\\.slicemachine\\assets\\slices\\Features\\default\\preview.png",
+            "path": "/Users/dianka/Documents/POC/prismic-poc/.slicemachine/assets/slices/Features/default/preview.png",
             "width": 1280,
             "height": 800
           },
           "withImage": {
-            "path": "C:\\Users\\diank\\OneDrive\\PC\\Documents\\1 Travail\\Jobs\\Prismic\\Formation\\repos\\prismic-poc\\slices\\Features\\withImage\\preview.png",
+            "path": "/Users/dianka/Documents/POC/prismic-poc/slices/Features/withImage/preview.png",
             "width": 1276,
             "height": 874
           }
@@ -939,17 +939,17 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "C:\\Users\\diank\\OneDrive\\PC\\Documents\\1 Travail\\Jobs\\Prismic\\Formation\\repos\\prismic-poc\\.slicemachine\\assets\\slices\\HeroBanner\\default\\preview.png",
+            "path": "/Users/dianka/Documents/POC/prismic-poc/.slicemachine/assets/slices/HeroBanner/default/preview.png",
             "width": 1280,
             "height": 582
           },
           "withoutCta": {
-            "path": "C:\\Users\\diank\\OneDrive\\PC\\Documents\\1 Travail\\Jobs\\Prismic\\Formation\\repos\\prismic-poc\\.slicemachine\\assets\\slices\\HeroBanner\\withoutCta\\preview.png",
+            "path": "/Users/dianka/Documents/POC/prismic-poc/.slicemachine/assets/slices/HeroBanner/withoutCta/preview.png",
             "width": 1280,
             "height": 548
           },
           "withSignUpAndMedia": {
-            "path": "C:\\Users\\diank\\OneDrive\\PC\\Documents\\1 Travail\\Jobs\\Prismic\\Formation\\repos\\prismic-poc\\slices\\HeroBanner\\withSignUpAndMedia\\preview.png",
+            "path": "/Users/dianka/Documents/POC/prismic-poc/slices/HeroBanner/withSignUpAndMedia/preview.png",
             "width": 1280,
             "height": 729
           }
@@ -958,12 +958,12 @@
       "menu": {
         "library": "slices",
         "id": "menu",
-        "name": "Menu",
+        "name": "MenuItem",
         "description": "Menu",
         "model": {
           "id": "menu",
           "type": "SharedSlice",
-          "name": "Menu",
+          "name": "MenuItem",
           "description": "Menu",
           "variations": [
             {
@@ -1018,7 +1018,7 @@
                     "label": "Second level label",
                     "placeholder": "",
                     "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                    "single": "paragraph"
                   }
                 },
                 "second_level_link": {
@@ -1027,6 +1027,26 @@
                     "label": "Second level link",
                     "placeholder": "",
                     "select": null
+                  }
+                },
+                "second_level_description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Second level description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "second_level_icon": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Second level icon",
+                    "constraint": {
+                      "width": 24,
+                      "height": 24
+                    },
+                    "thumbnails": []
                   }
                 }
               },
@@ -1045,13 +1065,13 @@
               "label": [
                 {
                   "type": "paragraph",
-                  "text": "Enim proident sunt esse commodo veniam et ipsum anim elit cillum et ex amet aute. Esse aliquip ipsum do dolor ad anim sunt duis anim deserunt non velit commodo.",
+                  "text": "Consectetur cupidatat exercitation exercitation laborum non ipsum in aliqua. Proident reprehenderit cillum nostrud. Exercitation occaecat minim nostrud et dolore et enim cillum.",
                   "spans": []
                 }
               ],
               "link": {
                 "link_type": "Web",
-                "url": "https://slicemachine.dev"
+                "url": "http://twitter.com"
               }
             },
             "slice_type": "menu"
@@ -1064,13 +1084,29 @@
                 "second_level_label": [
                   {
                     "type": "paragraph",
-                    "text": "Elit ipsum consequat anim et incididunt exercitation non enim do voluptate consequat amet eu sunt occaecat. Esse ipsum excepteur nulla sint id exercitation voluptate velit aute do minim non deserunt elit dolor. Ex nostrud cillum ullamco nostrud fugiat.",
+                    "text": "Nostrud id aliquip adipisicing enim minim ullamco magna cupidatat et culpa consequat sunt sit eu.",
                     "spans": []
                   }
                 ],
                 "second_level_link": {
                   "link_type": "Web",
-                  "url": "http://twitter.com"
+                  "url": "http://google.com"
+                },
+                "second_level_description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Pariatur reprehenderit veniam tempor voluptate exercitation culpa consequat fugiat. Esse do ex esse aliquip cupidatat mollit consequat ut pariatur sint incididunt sit.",
+                    "spans": []
+                  }
+                ],
+                "second_level_icon": {
+                  "dimensions": {
+                    "width": 24,
+                    "height": 24
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2"
                 }
               }
             ],
@@ -1078,7 +1114,7 @@
               "dropdown_label": [
                 {
                   "type": "paragraph",
-                  "text": "Mollit irure sit sit consequat sint et non excepteur eu. Nisi nisi ipsum exercitation culpa laborum.",
+                  "text": "Voluptate incididunt laboris aliquip deserunt dolor labore mollit consectetur aute veniam nostrud.",
                   "spans": []
                 }
               ]
@@ -1092,12 +1128,12 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "C:\\Users\\diank\\OneDrive\\PC\\Documents\\1 Travail\\Jobs\\Prismic\\Formation\\repos\\prismic-poc\\.slicemachine\\assets\\slices\\Menu\\default\\preview.png",
+            "path": "/Users/dianka/Documents/POC/prismic-poc/.slicemachine/assets/slices/MenuItem/default/preview.png",
             "width": 1280,
             "height": 400
           },
           "dropdown": {
-            "path": "C:\\Users\\diank\\OneDrive\\PC\\Documents\\1 Travail\\Jobs\\Prismic\\Formation\\repos\\prismic-poc\\.slicemachine\\assets\\slices\\Menu\\dropdown\\preview.png",
+            "path": "/Users/dianka/Documents/POC/prismic-poc/.slicemachine/assets/slices/MenuItem/dropdown/preview.png",
             "width": 1280,
             "height": 500
           }
@@ -1190,7 +1226,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "C:\\Users\\diank\\OneDrive\\PC\\Documents\\1 Travail\\Jobs\\Prismic\\Formation\\repos\\prismic-poc\\slices\\SocialFeedFlickr\\default\\preview.png",
+            "path": "/Users/dianka/Documents/POC/prismic-poc/slices/SocialFeedFlickr/default/preview.png",
             "width": 1248,
             "height": 401
           }

@@ -16,7 +16,7 @@ export default function Home({ doc, menu, footer, flickrData }) {
   )
 }
 
-export async function getStaticProps({ previewData, locale }) {
+export async function getStaticProps({ previewData, locale }) { // try with "locales"
 
   const client = createClient(previewData)
 

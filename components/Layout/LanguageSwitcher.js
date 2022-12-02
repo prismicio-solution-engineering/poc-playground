@@ -1,5 +1,4 @@
 import { PrismicLink } from "@prismicio/react";
-import { linkResolver } from "../../prismicio";
 import { createClient } from "../../prismicio";
 import { useRouter } from "next/router";
 // const LangIcon = ({ lang }) => {
@@ -10,7 +9,7 @@ import { useRouter } from "next/router";
 
 export const LanguageSwitcher = ({ currentLocale, altLangs = []}) => {
 
-  const locales = [currentLocale, altLangs.map(locale => locale.lang)];
+  const locales = [currentLocale, altLangs.map(locale => locale.lang)]; // To-do : use the locales from next.config so all pages have the same list of locales. To redirect to homepage if the page translated doesn't exist 
 
   const router = useRouter();
 

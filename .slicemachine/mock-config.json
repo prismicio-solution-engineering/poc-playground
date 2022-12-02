@@ -18,7 +18,15 @@
         }
       },
       "dropdown": {
-        "primary": {}
+        "primary": {},
+        "items": {
+          "second_level_label": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "HeroBanner": {
@@ -194,6 +202,29 @@
         "primary": {
           "image_position": {
             "content": false
+          }
+        }
+      }
+    },
+    "MenuItem": {
+      "default": {
+        "primary": {
+          "label": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      },
+      "dropdown": {
+        "primary": {},
+        "items": {
+          "second_level_label": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
           }
         }
       }

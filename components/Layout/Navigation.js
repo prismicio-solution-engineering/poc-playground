@@ -2,7 +2,10 @@ import React from "react";
 import { PrismicLink, PrismicRichText } from "@prismicio/react";
 import { Fragment, useState } from "react";
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
+import {
+  Bars3Icon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -98,10 +101,7 @@ const Navigation = ({ menu }) => {
                             </div>
                           </div>
                         ) : (
-                          <div
-                            key={idx}
-                            className="space-y-6 border-gray-200"
-                          >
+                          <div key={idx} className="space-y-6 border-gray-200">
                             <div className="flow-root">
                               <PrismicLink
                                 className="-m-2 block p-2 font-medium text-gray-900"
@@ -170,157 +170,88 @@ const Navigation = ({ menu }) => {
                       <div className="flex h-full justify-center space-x-8">
                         {menu?.data?.slices?.map((slice, idx) => {
                           return slice.variation == "dropdown" ? (
-                            // <Popover key={idx} className="flex">
-                            //   {({ open }) => (
-                            //     <>
-                            //       <div className="relative flex">
-                            //         <Popover.Button
-                            //           className={classNames(
-                            //             open
-                            //               ? "border-indigo-600 text-indigo-600"
-                            //               : "border-transparent text-gray-700 hover:text-gray-800",
-                            //             "relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out"
-                            //           )}
-                            //         >
-                            //           <PrismicRichText
-                            //             field={slice.primary.dropdown_label}
-                            //           />
-                            //         </Popover.Button>
-                            //       </div>
-
-                            //       <Transition
-                            //         as={Fragment}
-                            //         enter="transition ease-out duration-200"
-                            //         enterFrom="opacity-0"
-                            //         enterTo="opacity-100"
-                            //         leave="transition ease-in duration-150"
-                            //         leaveFrom="opacity-100"
-                            //         leaveTo="opacity-0"
-                            //       >
-                            //         <Popover.Panel className="absolute inset-x-0 top-full z-20 text-gray-500 sm:text-sm">
-                            //           <div
-                            //             className="absolute inset-0 top-1/2 bg-white shadow"
-                            //             aria-hidden="true"
-                            //           />
-
-                            //           <div className="relative bg-white">
-                            //             <div className="mx-auto px-8">
-                            //               <div className="grid grid-cols-2 items-start gap-y-10 gap-x-8 pt-10 pb-12">
-                            //                 <div className="grid grid-cols-2 gap-y-10 gap-x-8">
-                            //                   <div>
-                            //                     <ul
-                            //                       role="list"
-                            //                       aria-labelledby={`desktop-featured-heading-${(
-                            //                         <PrismicRichText
-                            //                           field={
-                            //                             slice.primary
-                            //                               .dropdown_label
-                            //                           }
-                            //                         />
-                            //                       )}`}
-                            //                       className="mt-6 space-y-6 sm:mt-4 sm:space-y-4"
-                            //                     >
-                            //                       {slice.items.map(
-                            //                         (item, idx) => (
-                            //                           <li
-                            //                             key={idx}
-                            //                             className="flex"
-                            //                           >
-                            //                             <PrismicLink
-                            //                               className="font-medium text-gray-900 hover:text-gray-700"
-                            //                               field={
-                            //                                 item.second_level_link
-                            //                               }
-                            //                             >
-                            //                               <PrismicRichText
-                            //                                 field={
-                            //                                   item.second_level_label
-                            //                                 }
-                            //                               />
-                            //                             </PrismicLink>
-                            //                           </li>
-                            //                         )
-                            //                       )}
-                            //                     </ul>
-                            //                   </div>
-                            //                 </div>
-                            //               </div>
-                            //             </div>
-                            //           </div>
-                            //         </Popover.Panel>
-                            //       </Transition>
-                            //     </>
-                            //   )}
-                            // </Popover>
-                            <Popover className="relative">
-      {({ open }) => (
-        <>
-          <Popover.Button
-            className={classNames(
-              open ? 'text-gray-900' : 'text-gray-500',
-              'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
-            )}
-          >
-            <PrismicRichText
+                            <Popover key={idx} className="flex">
+                              {({ open }) => (
+                                <>
+                                  <div className="relative flex">
+                                    <Popover.Button
+                                      className={classNames(
+                                        open
+                                          ? "border-indigo-600 text-indigo-600"
+                                          : "border-transparent text-gray-700 hover:text-gray-800",
+                                        "relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out"
+                                      )}
+                                    >
+                                      <PrismicRichText
                                         field={slice.primary.dropdown_label}
                                       />
-            <ChevronDownIcon
-              className={classNames(open ? 'text-gray-600' : 'text-gray-400', 'ml-2 h-5 w-5 group-hover:text-gray-500')}
-              aria-hidden="true"
-            />
-          </Popover.Button>
+                                    </Popover.Button>
+                                  </div>
 
-          <Transition
-            as={Fragment}
-            enter="transition ease-out duration-200"
-            enterFrom="opacity-0 translate-y-1"
-            enterTo="opacity-100 translate-y-0"
-            leave="transition ease-in duration-150"
-            leaveFrom="opacity-100 translate-y-0"
-            leaveTo="opacity-0 translate-y-1"
-          >
-            <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-xs -translate-x-1/2 transform px-2 sm:px-0">
-              <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                  {slice.items.map((item, idx) => (
-                    // <a
-                    //   key={idx}
-                    //   href={item.href}
-                    //   className="-m-3 block rounded-md p-3 transition duration-150 ease-in-out hover:bg-gray-50"
-                    // >
-                    //   <p className="text-base font-medium text-gray-900">{item.name}</p>
-                    //   <p className="mt-1 text-sm text-gray-500">{item.description}</p>
-                    // </a>
+                                  <Transition
+                                    as={Fragment}
+                                    enter="transition ease-out duration-200"
+                                    enterFrom="opacity-0"
+                                    enterTo="opacity-100"
+                                    leave="transition ease-in duration-150"
+                                    leaveFrom="opacity-100"
+                                    leaveTo="opacity-0"
+                                  >
+                                    <Popover.Panel className="absolute inset-x-0 top-full z-20 text-gray-500 sm:text-sm">
+                                      <div
+                                        className="absolute inset-0 top-1/2 bg-white shadow"
+                                        aria-hidden="true"
+                                      />
 
-<PrismicLink
-                              className="-m-3 block rounded-md p-3 transition duration-150 ease-in-out hover:bg-gray-50"
-                              field={
-                                item.second_level_link
-                              }
-                            >
-                              <div className="text-base font-medium text-gray-900">
-                                <PrismicRichText
-                                  field={
-                                    item.second_level_label
-                                  }
-                                />
-                              </div>
-                              <div className="mt-1 text-sm text-gray-500">
-                                <PrismicRichText
-                                  field={
-                                    item.second_level_description
-                                  }
-                                />
-                              </div>
-                            </PrismicLink>
-                  ))}
-                </div>
-              </div>
-            </Popover.Panel>
-          </Transition>
-        </>
-      )}
-    </Popover>
+                                      <div className="relative bg-white">
+                                        <div className="mx-auto px-8">
+                                          <div className="grid grid-cols-2 items-start gap-y-10 gap-x-8 pt-10 pb-12">
+                                            <div className="grid grid-cols-2 gap-y-10 gap-x-8">
+                                              <div>
+                                                <ul
+                                                  role="list"
+                                                  aria-labelledby={`desktop-featured-heading-${(
+                                                    <PrismicRichText
+                                                      field={
+                                                        slice.primary
+                                                          .dropdown_label
+                                                      }
+                                                    />
+                                                  )}`}
+                                                  className="mt-6 space-y-6 sm:mt-4 sm:space-y-4"
+                                                >
+                                                  {slice.items.map(
+                                                    (item, idx) => (
+                                                      <li
+                                                        key={idx}
+                                                        className="flex"
+                                                      >
+                                                        <PrismicLink
+                                                          className="font-medium text-gray-900 hover:text-gray-700"
+                                                          field={
+                                                            item.second_level_link
+                                                          }
+                                                        >
+                                                          <PrismicRichText
+                                                            field={
+                                                              item.second_level_label
+                                                            }
+                                                          />
+                                                        </PrismicLink>
+                                                      </li>
+                                                    )
+                                                  )}
+                                                </ul>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </Popover.Panel>
+                                  </Transition>
+                                </>
+                              )}
+                            </Popover>
                           ) : (
                             <PrismicLink
                               key={idx}

@@ -41,17 +41,6 @@ interface FooterDocumentData {
      *
      */
     copyright: prismicT.RichTextField;
-    /**
-     * Slice Zone field in *Footer*
-     *
-     * - **Field Type**: Slice Zone
-     * - **Placeholder**: *None*
-     * - **API ID Path**: footer.slices[]
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
-     *
-     */
-    slices: prismicT.SliceZone<FooterDocumentDataSlicesSlice>;
 }
 /**
  * Item in Footer → Internal Links
@@ -105,11 +94,6 @@ export interface FooterDocumentDataSocialLinksItem {
      */
     social_icon: prismicT.ImageField<never>;
 }
-/**
- * Slice for *Footer → Slice Zone*
- *
- */
-type FooterDocumentDataSlicesSlice = never;
 /**
  * Footer document from Prismic
  *
@@ -781,12 +765,12 @@ type HeroBannerSliceVariation = HeroBannerSliceDefault | HeroBannerSliceWithoutC
  */
 export type HeroBannerSlice = prismicT.SharedSlice<"hero_banner", HeroBannerSliceVariation>;
 /**
- * Primary content in Menu → Primary
+ * Primary content in MenuItem → Primary
  *
  */
 interface MenuSliceDefaultPrimary {
     /**
-     * Label field in *Menu → Primary*
+     * Label field in *MenuItem → Primary*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
@@ -796,7 +780,7 @@ interface MenuSliceDefaultPrimary {
      */
     label: prismicT.RichTextField;
     /**
-     * Link field in *Menu → Primary*
+     * Link field in *MenuItem → Primary*
      *
      * - **Field Type**: Link
      * - **Placeholder**: *None*
@@ -807,7 +791,7 @@ interface MenuSliceDefaultPrimary {
     link: prismicT.LinkField;
 }
 /**
- * Default variation for Menu Slice
+ * Default variation for MenuItem Slice
  *
  * - **API ID**: `default`
  * - **Description**: `Menu`
@@ -816,12 +800,12 @@ interface MenuSliceDefaultPrimary {
  */
 export type MenuSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<MenuSliceDefaultPrimary>, never>;
 /**
- * Primary content in Menu → Primary
+ * Primary content in MenuItem → Primary
  *
  */
 interface MenuSliceDropdownPrimary {
     /**
-     * Dropdown label field in *Menu → Primary*
+     * Dropdown label field in *MenuItem → Primary*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
@@ -832,12 +816,12 @@ interface MenuSliceDropdownPrimary {
     dropdown_label: prismicT.RichTextField;
 }
 /**
- * Item in Menu → Items
+ * Item in MenuItem → Items
  *
  */
 export interface MenuSliceDropdownItem {
     /**
-     * Second level label field in *Menu → Items*
+     * Second level label field in *MenuItem → Items*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
@@ -847,7 +831,7 @@ export interface MenuSliceDropdownItem {
      */
     second_level_label: prismicT.RichTextField;
     /**
-     * Second level link field in *Menu → Items*
+     * Second level link field in *MenuItem → Items*
      *
      * - **Field Type**: Link
      * - **Placeholder**: *None*
@@ -856,9 +840,29 @@ export interface MenuSliceDropdownItem {
      *
      */
     second_level_link: prismicT.LinkField;
+    /**
+     * Second level description field in *MenuItem → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: menu.items[].second_level_description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    second_level_description: prismicT.RichTextField;
+    /**
+     * Second level icon field in *MenuItem → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: menu.items[].second_level_icon
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    second_level_icon: prismicT.ImageField<never>;
 }
 /**
- * Dropdown variation for Menu Slice
+ * Dropdown variation for MenuItem Slice
  *
  * - **API ID**: `dropdown`
  * - **Description**: `Menu`
@@ -867,12 +871,12 @@ export interface MenuSliceDropdownItem {
  */
 export type MenuSliceDropdown = prismicT.SharedSliceVariation<"dropdown", Simplify<MenuSliceDropdownPrimary>, Simplify<MenuSliceDropdownItem>>;
 /**
- * Slice variation for *Menu*
+ * Slice variation for *MenuItem*
  *
  */
 type MenuSliceVariation = MenuSliceDefault | MenuSliceDropdown;
 /**
- * Menu Shared Slice
+ * MenuItem Shared Slice
  *
  * - **API ID**: `menu`
  * - **Description**: `Menu`
@@ -954,6 +958,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocumentDataInternalLinksItem, FooterDocumentDataSocialLinksItem, FooterDocumentDataSlicesSlice, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, LandingPageDocumentData, LandingPageDocumentDataSlicesSlice, LandingPageDocument, MenuDocumentData, MenuDocumentDataSlicesSlice, MenuDocument, AllDocumentTypes, AccordionSliceDefaultPrimary, AccordionSliceDefaultItem, AccordionSliceDefault, AccordionSliceVariation, AccordionSlice, FeaturesSliceDefaultPrimary, FeaturesSliceDefaultItem, FeaturesSliceDefault, FeaturesSliceWithImagePrimary, FeaturesSliceWithImageItem, FeaturesSliceWithImage, FeaturesSliceVariation, FeaturesSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefaultItem, HeroBannerSliceDefault, HeroBannerSliceWithoutCtaPrimary, HeroBannerSliceWithoutCta, HeroBannerSliceWithSignUpAndMediaPrimary, HeroBannerSliceWithSignUpAndMedia, HeroBannerSliceVariation, HeroBannerSlice, MenuSliceDefaultPrimary, MenuSliceDefault, MenuSliceDropdownPrimary, MenuSliceDropdownItem, MenuSliceDropdown, MenuSliceVariation, MenuSlice, SocialFeedFlickrSliceDefaultPrimary, SocialFeedFlickrSliceDefault, SocialFeedFlickrSliceVariation, SocialFeedFlickrSlice };
+        export type { FooterDocumentData, FooterDocumentDataInternalLinksItem, FooterDocumentDataSocialLinksItem, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, LandingPageDocumentData, LandingPageDocumentDataSlicesSlice, LandingPageDocument, MenuDocumentData, MenuDocumentDataSlicesSlice, MenuDocument, AllDocumentTypes, AccordionSliceDefaultPrimary, AccordionSliceDefaultItem, AccordionSliceDefault, AccordionSliceVariation, AccordionSlice, FeaturesSliceDefaultPrimary, FeaturesSliceDefaultItem, FeaturesSliceDefault, FeaturesSliceWithImagePrimary, FeaturesSliceWithImageItem, FeaturesSliceWithImage, FeaturesSliceVariation, FeaturesSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefaultItem, HeroBannerSliceDefault, HeroBannerSliceWithoutCtaPrimary, HeroBannerSliceWithoutCta, HeroBannerSliceWithSignUpAndMediaPrimary, HeroBannerSliceWithSignUpAndMedia, HeroBannerSliceVariation, HeroBannerSlice, MenuSliceDefaultPrimary, MenuSliceDefault, MenuSliceDropdownPrimary, MenuSliceDropdownItem, MenuSliceDropdown, MenuSliceVariation, MenuSlice, SocialFeedFlickrSliceDefaultPrimary, SocialFeedFlickrSliceDefault, SocialFeedFlickrSliceVariation, SocialFeedFlickrSlice };
     }
 }

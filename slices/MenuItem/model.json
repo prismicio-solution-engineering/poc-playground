@@ -1,7 +1,7 @@
 {
   "id": "menu",
   "type": "SharedSlice",
-  "name": "Menu",
+  "name": "MenuItem",
   "description": "Menu",
   "variations": [
     {
@@ -56,7 +56,7 @@
             "label": "Second level label",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "single": "paragraph"
           }
         },
         "second_level_link": {
@@ -65,6 +65,26 @@
             "label": "Second level link",
             "placeholder": "",
             "select": null
+          }
+        },
+        "second_level_description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Second level description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "second_level_icon": {
+          "type": "Image",
+          "config": {
+            "label": "Second level icon",
+            "constraint": {
+              "width": 24,
+              "height": 24
+            },
+            "thumbnails": []
           }
         }
       },
