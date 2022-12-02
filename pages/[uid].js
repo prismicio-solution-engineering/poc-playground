@@ -6,17 +6,17 @@ import { components } from '../slices/index';
 
 const __allComponents = { ...components }
 
-export default function LandingPage({ doc, menu, footer }) {
+export default function LandingPage({ doc, menu, footer, locales, alternatesUrls }) {
   return (
     <div>
-      <Layout currentLocale={doc.lang} altLangs={doc.alternate_languages} menu={menu} footer={footer}>
+      <Layout currentLocale={doc.lang} locales={locales} alternatesUrls={alternatesUrls} menu={menu} footer={footer}>
         <SliceZone slices={doc.data.slices} components={__allComponents} />
       </Layout>
     </div>
   )
 }
 
-export async function getStaticProps({ params, previewData, locale }) {
+export async function getStaticProps({ params, previewData, locale, locales }) {
 
   const client = createClient(previewData)
 
@@ -43,29 +43,34 @@ export async function getStaticProps({ params, previewData, locale }) {
 
 
   //Querying page
-  // const document = (await client.getSingle('home-page', { lang: locale }).catch(e => {
-  //   return null
-  // }));
-  // if (!document) {
-  //   return {
-  //     notFound: true,
-  //   }
-  // }
+  const document = (await client.getSingle('landing_page', { lang: locale }).catch(e => {
+    return null
+  }));
+  if (!document) {
+    return {
+      notFound: true,
+    }
+  }
 
-  // const altLangsGraphQuery = `{
-  //   homepage{
-  //     meta_title
-  //   }
-  // }`
+  // Get the alternate locales url with a light query
 
-  // const alternates = await client.getByIDs(document.alternate_languages.map(doc => doc.id),{graphQuery:altLangsGraphQuery ,lang: "*"})
-  // console.log(alternates.results.map(doc => ({lang: doc.lang, url : doc.url})))
+  const altLangsGraphQuery = `{
+    landing_page{
+      meta_title
+    }
+  }`
+
+  const alternates = await client.getByIDs(document.alternate_languages.map(doc => doc.id), {graphQuery:altLangsGraphQuery, lang: "*"})
+console.log(alternates.results)
+  const alternatesUrls = alternates.results.map(doc => ({lang: doc.lang, url : doc.url}))
 
   return {
     props: {
       doc,
       menu,
-      footer
+      footer,
+      locales,
+      alternatesUrls
     },
   }
 }

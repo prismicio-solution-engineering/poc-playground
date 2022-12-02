@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 
-export const Layout = ({ children, menu, footer, currentLocale, altLangs }) => {
+export const Layout = ({ children, menu, footer, currentLocale, locales, alternatesUrls }) => {
   return (
     <div>
       <div>
@@ -10,7 +10,7 @@ export const Layout = ({ children, menu, footer, currentLocale, altLangs }) => {
           <title>Prismic SE POC Website</title>
         </Head>
         {menu?.data ?
-          <Header menu={menu} currentLocale={currentLocale} altLangs={altLangs} />
+          <Header menu={menu} currentLocale={currentLocale} locales={locales} alternatesUrls={alternatesUrls} />
           : null
         }
         <main className="mb-10">

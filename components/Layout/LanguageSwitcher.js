@@ -7,18 +7,14 @@ import { useRouter } from "next/router";
 //   return <span className={`fi fi-${code}`} />;
 // };
 
-export const LanguageSwitcher = ({ currentLocale, altLangs = []}) => {
-
-  const locales = [currentLocale, altLangs.map(locale => locale.lang)]; // To-do : use the locales from next.config so all pages have the same list of locales. To redirect to homepage if the page translated doesn't exist 
+export const LanguageSwitcher = ({ currentLocale, locales, alternatesUrls }) => {
 
   const router = useRouter();
 
-  console.log(router)
-
   function handleChange(e) {
-    //Handle language redirect through the header language switch, this relies on linkResolver, additional queries would be needed for more complex urls
-    console.log(e.target.value);
-    // router.push()
+    const newUrl = alternatesUrls.filter(alt => alt.lang === e.target.value);
+    console.log(alternatesUrls)
+    // router.push(newUrl[0].url)
   }
 
   return (
