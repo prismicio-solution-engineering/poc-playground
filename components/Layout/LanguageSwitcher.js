@@ -13,7 +13,8 @@ export const LanguageSwitcher = ({ currentLocale, locales, alternatesUrls }) => 
 
   function handleChange(e) {
     const newUrl = alternatesUrls.filter(alt => alt.lang === e.target.value);
-    router.push(newUrl[0].url, newUrl[0].url, { locale : newUrl[0].lang })
+
+    newUrl[0] ? router.push(newUrl[0].url, newUrl[0].url, { locale : newUrl[0].lang }) : router.push("/", "/", { locale : e.target.value}) // TO-DO route to 404 page then redirect to home or default locale of that page ?
   }
 
   return (
