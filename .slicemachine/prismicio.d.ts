@@ -128,12 +128,92 @@ interface HomepageDocumentData {
      *
      */
     slices: prismicT.SliceZone<HomepageDocumentDataSlicesSlice>;
+    /**
+     * Meta Title field in *Homepage*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: My title for Search Engine
+     * - **API ID Path**: homepage.meta_title
+     * - **Tab**: SEO Metadata
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    meta_title: prismicT.KeyTextField;
+    /**
+     * Meta Description field in *Homepage*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: The description that will appear in search engine
+     * - **API ID Path**: homepage.meta_description
+     * - **Tab**: SEO Metadata
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    meta_description: prismicT.KeyTextField;
+    /**
+     * CanonicalLink field in *Homepage*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: homepage.canonicalLink
+     * - **Tab**: SEO Metadata
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    canonicalLink: prismicT.LinkField;
+    /**
+     * Social Cards - Facebook & Twitter field in *Homepage*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: homepage.social_cards[]
+     * - **Tab**: SEO Metadata
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    social_cards: prismicT.GroupField<Simplify<HomepageDocumentDataSocialCardsItem>>;
 }
 /**
  * Slice for *Homepage → Slice Zone*
  *
  */
 type HomepageDocumentDataSlicesSlice = AccordionSlice | HeroBannerSlice | SocialFeedFlickrSlice;
+/**
+ * Item in Homepage → Social Cards - Facebook & Twitter
+ *
+ */
+export interface HomepageDocumentDataSocialCardsItem {
+    /**
+     * Social Card Image field in *Homepage → Social Cards - Facebook & Twitter*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: homepage.social_cards[].social_card_image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    social_card_image: prismicT.ImageField<never>;
+    /**
+     * Social Card Title field in *Homepage → Social Cards - Facebook & Twitter*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: homepage.social_cards[].social_card_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    social_card_title: prismicT.KeyTextField;
+    /**
+     * Social card description field in *Homepage → Social Cards - Facebook & Twitter*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: homepage.social_cards[].social_card_description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    social_card_description: prismicT.KeyTextField;
+}
 /**
  * Homepage document from Prismic
  *
@@ -157,12 +237,92 @@ interface LandingPageDocumentData {
      *
      */
     slices: prismicT.SliceZone<LandingPageDocumentDataSlicesSlice>;
+    /**
+     * Meta Title field in *Landing page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: My title for Search Engine
+     * - **API ID Path**: landing_page.meta_title
+     * - **Tab**: SEO Metadata
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    meta_title: prismicT.KeyTextField;
+    /**
+     * Meta Description field in *Landing page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: The description that will appear in search engine
+     * - **API ID Path**: landing_page.meta_description
+     * - **Tab**: SEO Metadata
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    meta_description: prismicT.KeyTextField;
+    /**
+     * CanonicalLink field in *Landing page*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: landing_page.canonicalLink
+     * - **Tab**: SEO Metadata
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    canonicalLink: prismicT.LinkField;
+    /**
+     * Social Cards - Facebook & Twitter field in *Landing page*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: landing_page.social_cards[]
+     * - **Tab**: SEO Metadata
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    social_cards: prismicT.GroupField<Simplify<LandingPageDocumentDataSocialCardsItem>>;
 }
 /**
  * Slice for *Landing page → Slice Zone*
  *
  */
 type LandingPageDocumentDataSlicesSlice = HeroBannerSlice | AccordionSlice | SocialFeedFlickrSlice | FeaturesSlice;
+/**
+ * Item in Landing page → Social Cards - Facebook & Twitter
+ *
+ */
+export interface LandingPageDocumentDataSocialCardsItem {
+    /**
+     * Social Card Image field in *Landing page → Social Cards - Facebook & Twitter*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: landing_page.social_cards[].social_card_image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    social_card_image: prismicT.ImageField<never>;
+    /**
+     * Social Card Title field in *Landing page → Social Cards - Facebook & Twitter*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: landing_page.social_cards[].social_card_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    social_card_title: prismicT.KeyTextField;
+    /**
+     * Social card description field in *Landing page → Social Cards - Facebook & Twitter*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: landing_page.social_cards[].social_card_description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    social_card_description: prismicT.KeyTextField;
+}
 /**
  * Landing page document from Prismic
  *
@@ -948,6 +1108,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocumentDataInternalLinksItem, FooterDocumentDataSocialLinksItem, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, LandingPageDocumentData, LandingPageDocumentDataSlicesSlice, LandingPageDocument, MenuDocumentData, MenuDocumentDataSlicesSlice, MenuDocument, AllDocumentTypes, AccordionSliceDefaultPrimary, AccordionSliceDefaultItem, AccordionSliceDefault, AccordionSliceVariation, AccordionSlice, FeaturesSliceDefaultPrimary, FeaturesSliceDefaultItem, FeaturesSliceDefault, FeaturesSliceWithImagePrimary, FeaturesSliceWithImageItem, FeaturesSliceWithImage, FeaturesSliceVariation, FeaturesSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefaultItem, HeroBannerSliceDefault, HeroBannerSliceWithoutCtaPrimary, HeroBannerSliceWithoutCta, HeroBannerSliceWithSignUpAndMediaPrimary, HeroBannerSliceWithSignUpAndMedia, HeroBannerSliceVariation, HeroBannerSlice, MenuSliceDefaultPrimary, MenuSliceDefault, MenuSliceDropdownPrimary, MenuSliceDropdownItem, MenuSliceDropdown, MenuSliceVariation, MenuSlice, SocialFeedFlickrSliceDefaultPrimary, SocialFeedFlickrSliceDefault, SocialFeedFlickrSliceVariation, SocialFeedFlickrSlice };
+        export type { FooterDocumentData, FooterDocumentDataInternalLinksItem, FooterDocumentDataSocialLinksItem, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocumentDataSocialCardsItem, HomepageDocument, LandingPageDocumentData, LandingPageDocumentDataSlicesSlice, LandingPageDocumentDataSocialCardsItem, LandingPageDocument, MenuDocumentData, MenuDocumentDataSlicesSlice, MenuDocument, AllDocumentTypes, AccordionSliceDefaultPrimary, AccordionSliceDefaultItem, AccordionSliceDefault, AccordionSliceVariation, AccordionSlice, FeaturesSliceDefaultPrimary, FeaturesSliceDefaultItem, FeaturesSliceDefault, FeaturesSliceWithImagePrimary, FeaturesSliceWithImageItem, FeaturesSliceWithImage, FeaturesSliceVariation, FeaturesSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefaultItem, HeroBannerSliceDefault, HeroBannerSliceWithoutCtaPrimary, HeroBannerSliceWithoutCta, HeroBannerSliceWithSignUpAndMediaPrimary, HeroBannerSliceWithSignUpAndMedia, HeroBannerSliceVariation, HeroBannerSlice, MenuSliceDefaultPrimary, MenuSliceDefault, MenuSliceDropdownPrimary, MenuSliceDropdownItem, MenuSliceDropdown, MenuSliceVariation, MenuSlice, SocialFeedFlickrSliceDefaultPrimary, SocialFeedFlickrSliceDefault, SocialFeedFlickrSliceVariation, SocialFeedFlickrSlice };
     }
 }

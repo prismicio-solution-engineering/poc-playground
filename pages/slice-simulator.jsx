@@ -1,14 +1,20 @@
 import { SliceSimulator } from '@prismicio/slice-simulator-react'
 import { SliceZone } from '@prismicio/react'
 
-import { components } from '../slices'
 import state from '../.slicemachine/libraries-state.json'
+
+// Import Slices components
+import { components as defaultComponents } from '../slices/default/index'
+import { components as customComponents } from '../slices/custom/index'
+
+const __allComponents = {  ...defaultComponents, ...customComponents }
+
 
 const SliceSimulatorPage = () => {
     return (
         <SliceSimulator
             sliceZone={({ slices }) => (
-                <SliceZone slices={slices} components={components} />
+                <SliceZone slices={slices} components={__allComponents} />
             )}
             state={state}
         />

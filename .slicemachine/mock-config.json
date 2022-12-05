@@ -242,5 +242,20 @@
         }
       }
     }
+  },
+  "slices/default": {
+    "Accordion": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {}
+      }
+    }
   }
 }

@@ -1,7 +1,8 @@
 {
   "apiEndpoint": "https://se-poc.cdn.prismic.io/api/v2",
   "libraries": [
-    "@/slices"
+    "@/slices/default",
+    "@/slices/custom"
   ],
   "localSliceSimulatorURL": "http://localhost:3000/slice-simulator",
   "_latest": "0.5.2"

@@ -1,8 +1,8 @@
 {
-  "slices": {
+  "slices/default": {
     "components": {
       "accordion": {
-        "library": "slices",
+        "library": "slices/default",
         "id": "accordion",
         "name": "Accordion",
         "description": "Accordion",
@@ -62,19 +62,14 @@
                 "title": [
                   {
                     "type": "paragraph",
-                    "text": "Incididunt id adipisicing duis est qui sunt amet. Ut ad velit amet sit incididunt mollit laboris est fugiat mollit aute consequat aliquip ad non. Deserunt eiusmod est laborum cillum.",
+                    "text": "Eiusmod nisi irure adipisicing ut quis irure veniam irure nulla Lorem. Minim ullamco aute est commodo id.",
                     "spans": []
                   }
                 ],
                 "content": [
                   {
                     "type": "paragraph",
-                    "text": "Velit reprehenderit est anim laboris mollit eu ex nulla Lorem adipisicing sunt aute.",
-                    "spans": []
-                  },
-                  {
-                    "type": "paragraph",
-                    "text": "Lorem officia velit veniam non commodo elit adipisicing irure reprehenderit. Eu laborum fugiat mollit eu do sunt. Reprehenderit nisi ut ullamco reprehenderit.",
+                    "text": "Elit fugiat dolor tempor consectetur in consectetur. Est laborum adipisicing cillum et commodo dolor. Consequat ea minim aliqua labore sit nostrud nisi exercitation nisi labore minim eiusmod ea cillum.",
                     "spans": []
                   }
                 ]
@@ -84,7 +79,7 @@
               "title": [
                 {
                   "type": "heading2",
-                  "text": "Fifth",
+                  "text": "Silent",
                   "spans": []
                 }
               ]
@@ -98,14 +93,14 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/slices/Accordion/default/preview.png",
+            "path": "/Users/dianka/Documents/POC/prismic-poc/slices/default/Accordion/default/preview.png",
             "width": 2554,
             "height": 1204
           }
         }
       },
       "features": {
-        "library": "slices",
+        "library": "slices/default",
         "id": "features",
         "name": "Features",
         "description": "Features",
@@ -542,19 +537,19 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/.slicemachine/assets/slices/Features/default/preview.png",
+            "path": "/Users/dianka/Documents/POC/prismic-poc/.slicemachine/assets/slices/default/Features/default/preview.png",
             "width": 1280,
             "height": 800
           },
           "withImage": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/slices/Features/withImage/preview.png",
+            "path": "/Users/dianka/Documents/POC/prismic-poc/slices/default/Features/withImage/preview.png",
             "width": 1276,
             "height": 874
           }
         }
       },
       "hero_banner": {
-        "library": "slices",
+        "library": "slices/default",
         "id": "hero_banner",
         "name": "HeroBanner",
         "description": "HeroBanner",
@@ -939,24 +934,24 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/.slicemachine/assets/slices/HeroBanner/default/preview.png",
+            "path": "/Users/dianka/Documents/POC/prismic-poc/.slicemachine/assets/slices/default/HeroBanner/default/preview.png",
             "width": 1280,
             "height": 582
           },
           "withoutCta": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/.slicemachine/assets/slices/HeroBanner/withoutCta/preview.png",
+            "path": "/Users/dianka/Documents/POC/prismic-poc/.slicemachine/assets/slices/default/HeroBanner/withoutCta/preview.png",
             "width": 1280,
             "height": 548
           },
           "withSignUpAndMedia": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/slices/HeroBanner/withSignUpAndMedia/preview.png",
+            "path": "/Users/dianka/Documents/POC/prismic-poc/slices/default/HeroBanner/withSignUpAndMedia/preview.png",
             "width": 1280,
             "height": 729
           }
         }
       },
       "menu": {
-        "library": "slices",
+        "library": "slices/default",
         "id": "menu",
         "name": "MenuItem",
         "description": "Menu",
@@ -1108,19 +1103,19 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/.slicemachine/assets/slices/MenuItem/default/preview.png",
+            "path": "/Users/dianka/Documents/POC/prismic-poc/.slicemachine/assets/slices/default/MenuItem/default/preview.png",
             "width": 1280,
             "height": 400
           },
           "dropdown": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/.slicemachine/assets/slices/MenuItem/dropdown/preview.png",
+            "path": "/Users/dianka/Documents/POC/prismic-poc/.slicemachine/assets/slices/default/MenuItem/dropdown/preview.png",
             "width": 1280,
             "height": 500
           }
         }
       },
       "social_feed_flickr": {
-        "library": "slices",
+        "library": "slices/default",
         "id": "social_feed_flickr",
         "name": "SocialFeedFlickr",
         "description": "SocialFeedFlickr",
@@ -1206,12 +1201,15 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/slices/SocialFeedFlickr/default/preview.png",
+            "path": "/Users/dianka/Documents/POC/prismic-poc/slices/default/SocialFeedFlickr/default/preview.png",
             "width": 1248,
             "height": 401
           }
         }
       }
     }
+  },
+  "slices/custom": {
+    "components": {}
   }
 }
