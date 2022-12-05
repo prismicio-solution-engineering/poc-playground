@@ -1,8 +1,6 @@
 import React from "react";
-import { PrismicLink, PrismicRichText, SliceZone } from "@prismicio/react";
-import { components } from "../../slices";
+import { PrismicLink, PrismicRichText } from "@prismicio/react";
 
-const __allComponents = { ...components }
 
 const navLinks = (footer) => {
     return (
@@ -51,7 +49,6 @@ export function Footer({ footer }) {
                 {navLinks(footer)}
                 {socialLinks(footer)}
                 {copyright(footer)}
-                <SliceZone slices={footer?.data?.slices} components={__allComponents} />
             </div>
         </footer >
     )

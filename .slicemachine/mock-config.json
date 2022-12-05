@@ -257,5 +257,8 @@
         "items": {}
       }
     }
+  },
+  "slices/custom": {
+    "Test": {}
   }
 }

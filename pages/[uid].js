@@ -2,9 +2,13 @@ import { SliceZone } from "@prismicio/react";
 import { Layout } from "../components/Layout/Layout";
 import { createClient } from "../prismicio";
 import * as prismicH from "@prismicio/helpers";
-import { components } from "../slices/index";
 
-const __allComponents = { ...components };
+// Import Slices components
+import { components as defaultComponents } from '../slices/default/index'
+import { components as customComponents } from '../slices/custom/index'
+
+const __allComponents = {  ...defaultComponents, ...customComponents }
+
 
 export default function LandingPage({
   doc,
@@ -79,7 +83,7 @@ export async function getStaticProps({ params, previewData, locale, locales }) {
     document.alternate_languages.map((doc) => doc.id),
     { graphQuery: altLangsGraphQuery, lang: "*" }
   );
-  console.log(alternates.results);
+
   const alternatesUrls = alternates.results.map((doc) => ({
     lang: doc.lang,
     url: doc.url,

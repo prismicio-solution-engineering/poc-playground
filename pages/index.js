@@ -1,10 +1,13 @@
 import { SliceZone } from "@prismicio/react";
 import { Layout } from "../components/Layout/Layout";
 import { createClient } from "../prismicio";
-import { components } from "../slices/index";
 import axios from "axios";
 
-const __allComponents = { ...components };
+// Import Slices components
+import { components as defaultComponents } from '../slices/default/index'
+import { components as customComponents } from '../slices/custom/index'
+
+const __allComponents = {  ...defaultComponents, ...customComponents }
 
 export default function Home({ doc, menu, footer, flickrData, locales, alternatesUrls }) {
   return (
