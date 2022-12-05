@@ -35,7 +35,7 @@
             "label": "Description",
             "placeholder": "A nice description of your feature",
             "allowTargetBlank": true,
-            "single": "paragraph"
+            "single": "paragraph,strong,em,hyperlink"
           }
         },
         "image": {
@@ -112,7 +112,7 @@
             "label": "Description",
             "placeholder": "A nice description of your feature",
             "allowTargetBlank": true,
-            "single": "paragraph"
+            "single": "paragraph,hyperlink,strong,em"
           }
         },
         "image": {
@@ -161,7 +161,7 @@
             "label": "Description",
             "placeholder": "A nice description of your feature",
             "allowTargetBlank": true,
-            "single": "paragraph"
+            "single": "paragraph,hyperlink,strong,em"
           }
         },
         "form_label": {

@@ -1103,60 +1103,11 @@ type SocialFeedFlickrSliceVariation = SocialFeedFlickrSliceDefault;
  *
  */
 export type SocialFeedFlickrSlice = prismicT.SharedSlice<"social_feed_flickr", SocialFeedFlickrSliceVariation>;
-/**
- * Primary content in Test → Primary
- *
- */
-interface TestSliceDefaultPrimary {
-    /**
-     * Title field in *Test → Primary*
-     *
-     * - **Field Type**: Title
-     * - **Placeholder**: This is where it all begins...
-     * - **API ID Path**: test.primary.title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    title: prismicT.TitleField;
-    /**
-     * Description field in *Test → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: A nice description of your feature
-     * - **API ID Path**: test.primary.description
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    description: prismicT.RichTextField;
-}
-/**
- * Default variation for Test Slice
- *
- * - **API ID**: `default`
- * - **Description**: `Test`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type TestSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<TestSliceDefaultPrimary>, never>;
-/**
- * Slice variation for *Test*
- *
- */
-type TestSliceVariation = TestSliceDefault;
-/**
- * Test Shared Slice
- *
- * - **API ID**: `test`
- * - **Description**: `Test`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type TestSlice = prismicT.SharedSlice<"test", TestSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocumentDataInternalLinksItem, FooterDocumentDataSocialLinksItem, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocumentDataSocialCardsItem, HomepageDocument, LandingPageDocumentData, LandingPageDocumentDataSlicesSlice, LandingPageDocumentDataSocialCardsItem, LandingPageDocument, MenuDocumentData, MenuDocumentDataSlicesSlice, MenuDocument, AllDocumentTypes, AccordionSliceDefaultPrimary, AccordionSliceDefaultItem, AccordionSliceDefault, AccordionSliceVariation, AccordionSlice, FeaturesSliceDefaultPrimary, FeaturesSliceDefaultItem, FeaturesSliceDefault, FeaturesSliceWithImagePrimary, FeaturesSliceWithImageItem, FeaturesSliceWithImage, FeaturesSliceVariation, FeaturesSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefaultItem, HeroBannerSliceDefault, HeroBannerSliceWithoutCtaPrimary, HeroBannerSliceWithoutCta, HeroBannerSliceWithSignUpAndMediaPrimary, HeroBannerSliceWithSignUpAndMedia, HeroBannerSliceVariation, HeroBannerSlice, MenuSliceDefaultPrimary, MenuSliceDefault, MenuSliceDropdownPrimary, MenuSliceDropdownItem, MenuSliceDropdown, MenuSliceVariation, MenuSlice, SocialFeedFlickrSliceDefaultPrimary, SocialFeedFlickrSliceDefault, SocialFeedFlickrSliceVariation, SocialFeedFlickrSlice, TestSliceDefaultPrimary, TestSliceDefault, TestSliceVariation, TestSlice };
+        export type { FooterDocumentData, FooterDocumentDataInternalLinksItem, FooterDocumentDataSocialLinksItem, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocumentDataSocialCardsItem, HomepageDocument, LandingPageDocumentData, LandingPageDocumentDataSlicesSlice, LandingPageDocumentDataSocialCardsItem, LandingPageDocument, MenuDocumentData, MenuDocumentDataSlicesSlice, MenuDocument, AllDocumentTypes, AccordionSliceDefaultPrimary, AccordionSliceDefaultItem, AccordionSliceDefault, AccordionSliceVariation, AccordionSlice, FeaturesSliceDefaultPrimary, FeaturesSliceDefaultItem, FeaturesSliceDefault, FeaturesSliceWithImagePrimary, FeaturesSliceWithImageItem, FeaturesSliceWithImage, FeaturesSliceVariation, FeaturesSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefaultItem, HeroBannerSliceDefault, HeroBannerSliceWithoutCtaPrimary, HeroBannerSliceWithoutCta, HeroBannerSliceWithSignUpAndMediaPrimary, HeroBannerSliceWithSignUpAndMedia, HeroBannerSliceVariation, HeroBannerSlice, MenuSliceDefaultPrimary, MenuSliceDefault, MenuSliceDropdownPrimary, MenuSliceDropdownItem, MenuSliceDropdown, MenuSliceVariation, MenuSlice, SocialFeedFlickrSliceDefaultPrimary, SocialFeedFlickrSliceDefault, SocialFeedFlickrSliceVariation, SocialFeedFlickrSlice };
     }
 }
