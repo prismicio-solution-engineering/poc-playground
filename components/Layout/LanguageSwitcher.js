@@ -14,7 +14,7 @@ export const LanguageSwitcher = ({ currentLocale, locales, alternatesUrls }) => 
   function handleChange(e) {
     const newUrl = alternatesUrls.filter(alt => alt.lang === e.target.value);
     console.log(alternatesUrls)
-    // router.push(newUrl[0].url)
+    router.push(newUrl[0].url, newUrl[0].url, { locale : newUrl[0].lang })
   }
 
   return (

@@ -88,7 +88,7 @@ export async function getStaticProps({ previewData, locale, locales }) {
   // Get the alternate locales url with a light query
 
   const altLangsGraphQuery = `{
-    landing_page{
+    hamepage{
       meta_title
     }
   }`;

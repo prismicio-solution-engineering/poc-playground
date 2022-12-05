@@ -12,11 +12,11 @@ export const repositoryName = prismic.getRepositoryName(sm.apiEndpoint)
 const routes = [
     {
         type: 'homepage',
-        path: '/:lang?/',
+        path: '/',
     },
     {
         type: 'landing_page',
-        path: '/:lang?/:uid',
+        path: '/:uid',
     },
 ]
 
