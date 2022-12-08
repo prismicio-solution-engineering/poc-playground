@@ -9,16 +9,16 @@
       "title": [
         {
           "type": "heading2",
-          "text": "Chest",
+          "text": "Excellent",
           "spans": []
         }
       ],
-      "social_link_label": "See more",
+      "social_link_label": "can",
       "social_link_url": {
         "link_type": "Web",
-        "url": "http://twitter.com"
+        "url": "https://slicemachine.dev"
       },
-      "number_of_posts": 10
+      "number_of_posts": 87
     },
     "slice_type": "social_feed_flickr"
   }

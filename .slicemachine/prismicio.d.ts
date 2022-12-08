@@ -394,7 +394,7 @@ interface AccordionSliceDefaultPrimary {
      * Title field in *Accordion → Primary*
      *
      * - **Field Type**: Title
-     * - **Placeholder**: Accordion title
+     * - **Placeholder**: Section title
      * - **API ID Path**: accordion.primary.title
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
@@ -410,7 +410,7 @@ export interface AccordionSliceDefaultItem {
      * Title field in *Accordion → Items*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: Dropdown title
+     * - **Placeholder**: First level label
      * - **API ID Path**: accordion.items[].title
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
@@ -459,7 +459,7 @@ interface FeaturesSliceDefaultPrimary {
      * Title field in *Features → Primary*
      *
      * - **Field Type**: Title
-     * - **Placeholder**: This is where it all begins...
+     * - **Placeholder**: Section title
      * - **API ID Path**: features.primary.title
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
@@ -469,7 +469,7 @@ interface FeaturesSliceDefaultPrimary {
      * Description field in *Features → Primary*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: A nice description of your feature
+     * - **Placeholder**: Section description
      * - **API ID Path**: features.primary.description
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
@@ -485,7 +485,7 @@ export interface FeaturesSliceDefaultItem {
      * Feature Title field in *Features → Items*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Item title
      * - **API ID Path**: features.items[].feature_title
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
@@ -495,14 +495,14 @@ export interface FeaturesSliceDefaultItem {
      * Feature Description field in *Features → Items*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Item description
      * - **API ID Path**: features.items[].feature_description
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
     feature_description: prismicT.RichTextField;
     /**
-     * Feature Icon field in *Features → Items*
+     * Feature Icon Image field in *Features → Items*
      *
      * - **Field Type**: Image
      * - **Placeholder**: *None*
@@ -530,7 +530,7 @@ interface FeaturesSliceWithImagePrimary {
      * Title field in *Features → Primary*
      *
      * - **Field Type**: Title
-     * - **Placeholder**: Ignore to not show the section
+     * - **Placeholder**: Section title
      * - **API ID Path**: features.primary.title
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
@@ -540,7 +540,7 @@ interface FeaturesSliceWithImagePrimary {
      * Description field in *Features → Primary*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: Ignore to not show the section
+     * - **Placeholder**: Section description
      * - **API ID Path**: features.primary.description
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
@@ -597,7 +597,7 @@ export interface FeaturesSliceWithImageItem {
      * Feature Title field in *Features → Items*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Item title
      * - **API ID Path**: features.items[].feature_title
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
@@ -607,14 +607,14 @@ export interface FeaturesSliceWithImageItem {
      * Feature Description field in *Features → Items*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Item description
      * - **API ID Path**: features.items[].feature_description
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
     feature_description: prismicT.RichTextField;
     /**
-     * Feature Icon field in *Features → Items*
+     * Feature Icon Image field in *Features → Items*
      *
      * - **Field Type**: Image
      * - **Placeholder**: *None*
@@ -676,7 +676,7 @@ interface HeroBannerSliceDefaultPrimary {
      * Description field in *HeroBanner → Primary*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: A nice description of your feature
+     * - **Placeholder**: Section description
      * - **API ID Path**: hero_banner.primary.description
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
@@ -702,7 +702,7 @@ export interface HeroBannerSliceDefaultItem {
      * Cta Label field in *HeroBanner → Items*
      *
      * - **Field Type**: Text
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Link label
      * - **API ID Path**: hero_banner.items[].cta_label
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
@@ -712,7 +712,7 @@ export interface HeroBannerSliceDefaultItem {
      * Cta Link field in *HeroBanner → Items*
      *
      * - **Field Type**: Link
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Link URL
      * - **API ID Path**: hero_banner.items[].cta_link
      * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
      *
@@ -768,7 +768,7 @@ interface HeroBannerSliceWithoutCtaPrimary {
      * Description field in *HeroBanner → Primary*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: A nice description of your feature
+     * - **Placeholder**: Section description
      * - **API ID Path**: hero_banner.primary.description
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
@@ -800,6 +800,16 @@ export type HeroBannerSliceWithoutCta = prismicT.SharedSliceVariation<"withoutCt
  */
 interface HeroBannerSliceWithSignUpAndMediaPrimary {
     /**
+     * Form top message field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: Short message
+     * - **API ID Path**: hero_banner.primary.form_top_message
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    form_top_message: prismicT.RichTextField;
+    /**
      * Title Top line field in *HeroBanner → Primary*
      *
      * - **Field Type**: Title
@@ -823,7 +833,7 @@ interface HeroBannerSliceWithSignUpAndMediaPrimary {
      * Description field in *HeroBanner → Primary*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: A nice description of your feature
+     * - **Placeholder**: Section description
      * - **API ID Path**: hero_banner.primary.description
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
@@ -833,27 +843,17 @@ interface HeroBannerSliceWithSignUpAndMediaPrimary {
      * Form Label field in *HeroBanner → Primary*
      *
      * - **Field Type**: Text
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Form label, not displayed
      * - **API ID Path**: hero_banner.primary.form_label
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
     form_label: prismicT.KeyTextField;
     /**
-     * Form top message field in *HeroBanner → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: Sign up to get ...
-     * - **API ID Path**: hero_banner.primary.form_top_message
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    form_top_message: prismicT.RichTextField;
-    /**
      * Form placeholder field in *HeroBanner → Primary*
      *
      * - **Field Type**: Text
-     * - **Placeholder**: Field placeholder
+     * - **Placeholder**: Email field placeholder
      * - **API ID Path**: hero_banner.primary.form_placeholder
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
@@ -863,22 +863,12 @@ interface HeroBannerSliceWithSignUpAndMediaPrimary {
      * Form Cta Label field in *HeroBanner → Primary*
      *
      * - **Field Type**: Text
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Link label
      * - **API ID Path**: hero_banner.primary.form_cta_label
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
     form_cta_label: prismicT.KeyTextField;
-    /**
-     * Privacy message field in *HeroBanner → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: Your data is safe with us...
-     * - **API ID Path**: hero_banner.primary.privacy_message
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    privacy_message: prismicT.RichTextField;
     /**
      * Media Thumbnail field in *HeroBanner → Primary*
      *
@@ -900,6 +890,16 @@ interface HeroBannerSliceWithSignUpAndMediaPrimary {
      *
      */
     show_play_video_button: prismicT.BooleanField;
+    /**
+     * Privacy message field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: Privacy message
+     * - **API ID Path**: hero_banner.primary.privacy_message
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    privacy_message: prismicT.RichTextField;
 }
 /**
  * With sign up and media variation for HeroBanner Slice
@@ -933,7 +933,7 @@ interface MenuSliceDefaultPrimary {
      * Label field in *MenuItem → Primary*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Label
      * - **API ID Path**: menu.primary.label
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
@@ -943,7 +943,7 @@ interface MenuSliceDefaultPrimary {
      * Link field in *MenuItem → Primary*
      *
      * - **Field Type**: Link
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Link
      * - **API ID Path**: menu.primary.link
      * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
      *
@@ -968,7 +968,7 @@ interface MenuSliceDropdownPrimary {
      * Dropdown label field in *MenuItem → Primary*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
+     * - **Placeholder**: First level label
      * - **API ID Path**: menu.primary.label
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
@@ -984,7 +984,7 @@ export interface MenuSliceDropdownItem {
      * Second level link field in *MenuItem → Items*
      *
      * - **Field Type**: Link
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Second level link
      * - **API ID Path**: menu.items[].second_level_link
      * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
      *
@@ -994,7 +994,7 @@ export interface MenuSliceDropdownItem {
      * Second level label field in *MenuItem → Items*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Second level label
      * - **API ID Path**: menu.items[].second_level_label
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
@@ -1004,7 +1004,7 @@ export interface MenuSliceDropdownItem {
      * Second level description field in *MenuItem → Items*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Second level description paragraph
      * - **API ID Path**: menu.items[].second_level_description
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
@@ -1043,7 +1043,7 @@ interface SocialFeedFlickrSliceDefaultPrimary {
      * Title field in *SocialFeedFlickr → Primary*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Title
      * - **API ID Path**: social_feed_flickr.primary.title
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
@@ -1053,7 +1053,7 @@ interface SocialFeedFlickrSliceDefaultPrimary {
      * Social Link Label field in *SocialFeedFlickr → Primary*
      *
      * - **Field Type**: Text
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Link label
      * - **API ID Path**: social_feed_flickr.primary.social_link_label
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
@@ -1063,7 +1063,7 @@ interface SocialFeedFlickrSliceDefaultPrimary {
      * Social Link Url field in *SocialFeedFlickr → Primary*
      *
      * - **Field Type**: Link
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Link URL
      * - **API ID Path**: social_feed_flickr.primary.social_link_url
      * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
      *

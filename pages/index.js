@@ -100,7 +100,7 @@ export async function getStaticProps({ previewData, locale, locales }) {
     doc.alternate_languages.map((doc) => doc.id),
     { graphQuery: altLangsGraphQuery, lang: "*" }
   );
-  console.log(alternates.results);
+  
   const alternatesUrls = alternates.results.map((doc) => ({
     lang: doc.lang,
     url: doc.url,

@@ -33,7 +33,7 @@
           "type": "StructuredText",
           "config": {
             "label": "Description",
-            "placeholder": "A nice description of your feature",
+            "placeholder": "Section description",
             "allowTargetBlank": true,
             "single": "paragraph,strong,em,hyperlink"
           }
@@ -55,14 +55,15 @@
           "type": "Text",
           "config": {
             "label": "Cta Label",
-            "placeholder": ""
+            "placeholder": "Link label"
           }
         },
         "cta_link": {
           "type": "Link",
           "config": {
             "label": "Cta Link",
-            "placeholder": "",
+            "placeholder": "Link URL",
+            "allowTargetBlank": false,
             "select": null
           }
         },
@@ -110,9 +111,9 @@
           "type": "StructuredText",
           "config": {
             "label": "Description",
-            "placeholder": "A nice description of your feature",
+            "placeholder": "Section description",
             "allowTargetBlank": true,
-            "single": "paragraph,hyperlink,strong,em"
+            "single": "paragraph,strong,em,hyperlink"
           }
         },
         "image": {
@@ -137,6 +138,15 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "HeroBanner",
       "primary": {
+        "form_top_message": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Form top message",
+            "placeholder": "Short message",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
         "title_top_line": {
           "type": "StructuredText",
           "config": {
@@ -159,48 +169,30 @@
           "type": "StructuredText",
           "config": {
             "label": "Description",
-            "placeholder": "A nice description of your feature",
+            "placeholder": "Section description",
             "allowTargetBlank": true,
-            "single": "paragraph,hyperlink,strong,em"
+            "single": "paragraph,strong,em,hyperlink"
           }
         },
         "form_label": {
           "type": "Text",
           "config": {
             "label": "Form Label",
-            "placeholder": ""
-          }
-        },
-        "form_top_message": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Form top message",
-            "placeholder": "Sign up to get ...",
-            "allowTargetBlank": true,
-            "single": "paragraph"
+            "placeholder": "Form label, not displayed"
           }
         },
         "form_placeholder": {
           "type": "Text",
           "config": {
             "label": "Form placeholder",
-            "placeholder": "Field placeholder"
+            "placeholder": "Email field placeholder"
           }
         },
         "form_cta_label": {
           "type": "Text",
           "config": {
             "label": "Form Cta Label",
-            "placeholder": ""
-          }
-        },
-        "privacy_message": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Privacy message",
-            "placeholder": "Your data is safe with us...",
-            "allowTargetBlank": true,
-            "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item,rtl"
+            "placeholder": "Link label"
           }
         },
         "media_thumbnail": {
@@ -218,6 +210,15 @@
             "placeholder_false": "Hide",
             "placeholder_true": "Show",
             "default_value": true
+          }
+        },
+        "privacy_message": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Privacy message",
+            "placeholder": "Privacy message",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item,rtl"
           }
         }
       },

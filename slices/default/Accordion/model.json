@@ -15,7 +15,7 @@
           "type": "StructuredText",
           "config": {
             "label": "Title",
-            "placeholder": "Accordion title",
+            "placeholder": "Section title",
             "allowTargetBlank": true,
             "single": "heading2"
           }
@@ -26,7 +26,7 @@
           "type": "StructuredText",
           "config": {
             "label": "Title",
-            "placeholder": "Dropdown title",
+            "placeholder": "First level label",
             "allowTargetBlank": true,
             "single": "paragraph,preformatted,strong,em"
           }

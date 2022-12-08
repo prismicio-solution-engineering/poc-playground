@@ -7,7 +7,7 @@ import * as prismicH from "@prismicio/helpers";
 import { components as defaultComponents } from '../slices/default/index'
 import { components as customComponents } from '../slices/custom/index'
 
-const __allComponents = {  ...defaultComponents, ...customComponents }
+const __allComponents = { ...defaultComponents, ...customComponents }
 
 
 export default function LandingPage({
@@ -56,10 +56,10 @@ export async function getStaticProps({ params, previewData, locale, locales }) {
   const footer = await client
     .getSingle("footer", { lang: locale })
     .catch((e) => {
-      return null;
+      return null; //Say no footer, same for all catch
     });
 
-  //Querying page
+  // Query the  page
   const document = await client
     .getSingle("landing_page", { lang: locale })
     .catch((e) => {
@@ -72,7 +72,6 @@ export async function getStaticProps({ params, previewData, locale, locales }) {
   }
 
   // Get the alternate locales url with a light query
-
   const altLangsGraphQuery = `{
     landing_page{
       meta_title

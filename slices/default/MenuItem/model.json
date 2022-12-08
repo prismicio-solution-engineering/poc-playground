@@ -15,7 +15,7 @@
           "type": "StructuredText",
           "config": {
             "label": "Label",
-            "placeholder": "",
+            "placeholder": "Label",
             "allowTargetBlank": true,
             "single": "paragraph"
           }
@@ -24,7 +24,8 @@
           "type": "Link",
           "config": {
             "label": "Link",
-            "placeholder": "",
+            "placeholder": "Link",
+            "allowTargetBlank": false,
             "select": null
           }
         }
@@ -43,7 +44,7 @@
           "type": "StructuredText",
           "config": {
             "label": "Dropdown label",
-            "placeholder": "",
+            "placeholder": "First level label",
             "allowTargetBlank": true,
             "single": "paragraph"
           }
@@ -54,7 +55,8 @@
           "type": "Link",
           "config": {
             "label": "Second level link",
-            "placeholder": "",
+            "placeholder": "Second level link",
+            "allowTargetBlank": false,
             "select": null
           }
         },
@@ -62,7 +64,7 @@
           "type": "StructuredText",
           "config": {
             "label": "Second level label",
-            "placeholder": "",
+            "placeholder": "Second level label",
             "allowTargetBlank": true,
             "single": "paragraph"
           }
@@ -71,7 +73,7 @@
           "type": "StructuredText",
           "config": {
             "label": "Second level description",
-            "placeholder": "",
+            "placeholder": "Second level description paragraph",
             "allowTargetBlank": true,
             "single": "paragraph"
           }
