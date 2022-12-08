@@ -964,14 +964,14 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/.slicemachine/assets/slices/default/MenuItem/default/preview.png",
-            "width": 1280,
-            "height": 400
+            "path": "/Users/dianka/Documents/POC/prismic-poc/slices/default/MenuItem/default/preview.png",
+            "width": 76,
+            "height": 92
           },
           "dropdown": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/.slicemachine/assets/slices/default/MenuItem/dropdown/preview.png",
-            "width": 1280,
-            "height": 500
+            "path": "/Users/dianka/Documents/POC/prismic-poc/slices/default/MenuItem/dropdown/preview.png",
+            "width": 448,
+            "height": 283
           }
         }
       },
