@@ -3,7 +3,23 @@
     "homepage": {},
     "landing_page": {},
     "menu": {},
-    "footer": {}
+    "footer": {
+      "internalLinks": {
+        "link_label": {
+          "config": {
+            "patternType": "PARAGRAPH",
+            "blocks": 1
+          }
+        }
+      },
+      "social_links": {},
+      "copyright": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    }
   },
   "slices": {
     "Menu": {

@@ -14,16 +14,17 @@
               "type": "StructuredText",
               "config": {
                 "label": "Link Label",
-                "placeholder": "",
+                "placeholder": "Link label",
                 "allowTargetBlank": true,
-                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                "single": "paragraph"
               }
             },
             "link": {
               "type": "Link",
               "config": {
                 "label": "Link",
-                "placeholder": "",
+                "placeholder": "Link",
+                "allowTargetBlank": false,
                 "select": null
               }
             }
@@ -39,14 +40,15 @@
               "type": "Link",
               "config": {
                 "label": "Social Link",
-                "placeholder": "",
+                "placeholder": "Link URL",
+                "allowTargetBlank": false,
                 "select": null
               }
             },
             "social_icon": {
               "type": "Image",
               "config": {
-                "label": "Social Icon",
+                "label": "Social Icon Image",
                 "constraint": {
                   "width": 24,
                   "height": 24
@@ -61,9 +63,9 @@
         "type": "StructuredText",
         "config": {
           "label": "Copyright",
-          "placeholder": "",
+          "placeholder": "Copyright content",
           "allowTargetBlank": true,
-          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          "multi": "paragraph,strong,em,hyperlink,embed,list-item,o-list-item,rtl,preformatted,image"
         }
       }
     }

@@ -16,13 +16,13 @@
         "link_label": [
           {
             "type": "paragraph",
-            "text": "Aute anim dolor nulla proident ex excepteur nisi incididunt exercitation.",
+            "text": "Lorem nulla non ipsum cupidatat incididunt deserunt ut esse anim nostrud pariatur velit adipisicing. Anim consectetur quis ipsum.",
             "spans": []
           }
         ],
         "link": {
           "link_type": "Web",
-          "url": "http://twitter.com"
+          "url": "https://prismic.io"
         }
       }
     ],
@@ -30,7 +30,7 @@
       {
         "social_link": {
           "link_type": "Web",
-          "url": "http://google.com"
+          "url": "https://prismic.io"
         },
         "social_icon": {
           "dimensions": {
@@ -39,17 +39,16 @@
           },
           "alt": null,
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869"
+          "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5"
         }
       }
     ],
     "copyright": [
       {
         "type": "paragraph",
-        "text": "Labore velit qui enim est et ad culpa eiusmod reprehenderit voluptate est. Ad nisi eu do mollit cupidatat non officia. Cupidatat et pariatur magna eiusmod sunt officia occaecat laboris.",
+        "text": "Reprehenderit proident anim eu ad cupidatat sit ea do reprehenderit commodo dolore nulla ullamco enim.",
         "spans": []
       }
-    ],
-    "slices": []
+    ]
   }
 }

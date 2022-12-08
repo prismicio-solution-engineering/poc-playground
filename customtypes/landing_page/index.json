@@ -9,7 +9,7 @@
         "type": "UID",
         "config": {
           "label": "Uid",
-          "placeholder": ""
+          "placeholder": "unique identifier, for URL slug"
         }
       },
       "slices": {

@@ -11,6 +11,27 @@
   "lang": "en-us",
   "alternate_languages": [],
   "data": {
-    "slices": []
+    "slices": [],
+    "meta_title": "wind",
+    "meta_description": "learn",
+    "canonicalLink": {
+      "link_type": "Web",
+      "url": "http://twitter.com"
+    },
+    "social_cards": [
+      {
+        "social_card_image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869"
+        },
+        "social_card_title": "closer",
+        "social_card_description": "easily"
+      }
+    ]
   }
 }

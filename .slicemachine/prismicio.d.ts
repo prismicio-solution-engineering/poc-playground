@@ -34,7 +34,7 @@ interface FooterDocumentData {
      * Copyright field in *Footer*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Copyright content
      * - **API ID Path**: footer.copyright
      * - **Tab**: Main
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
@@ -51,7 +51,7 @@ export interface FooterDocumentDataInternalLinksItem {
      * Link Label field in *Footer → Internal Links*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Link label
      * - **API ID Path**: footer.internalLinks[].link_label
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
@@ -61,7 +61,7 @@ export interface FooterDocumentDataInternalLinksItem {
      * Link field in *Footer → Internal Links*
      *
      * - **Field Type**: Link
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Link
      * - **API ID Path**: footer.internalLinks[].link
      * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
      *
@@ -77,14 +77,14 @@ export interface FooterDocumentDataSocialLinksItem {
      * Social Link field in *Footer → Social Links*
      *
      * - **Field Type**: Link
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Link URL
      * - **API ID Path**: footer.social_links[].social_link
      * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
      *
      */
     social_link: prismicT.LinkField;
     /**
-     * Social Icon field in *Footer → Social Links*
+     * Social Icon Image field in *Footer → Social Links*
      *
      * - **Field Type**: Image
      * - **Placeholder**: *None*
@@ -106,17 +106,6 @@ export interface FooterDocumentDataSocialLinksItem {
 export type FooterDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<FooterDocumentData>, "footer", Lang>;
 /** Content for Homepage documents */
 interface HomepageDocumentData {
-    /**
-     * Title field in *Homepage*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: homepage.title
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    title: prismicT.KeyTextField;
     /**
      * Slice Zone field in *Homepage*
      *
@@ -350,7 +339,7 @@ interface MenuDocumentData {
      * Company name field in *Menu*
      *
      * - **Field Type**: Text
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Company name
      * - **API ID Path**: menu.company_name
      * - **Tab**: Main
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
