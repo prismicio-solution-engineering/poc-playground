@@ -50,7 +50,7 @@ const HeroBanner = ({ slice }) => (
                           }
                           field={item.cta_link}
                         >
-                          {item.cta_type}
+                          {item.cta_label}
                         </PrismicLink>
                       </div>
                     ))}
