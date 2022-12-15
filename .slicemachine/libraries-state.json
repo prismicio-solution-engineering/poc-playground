@@ -93,7 +93,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/slices/default/Accordion/default/preview.png",
+            "path": "/Users/dianka/Documents/POC/poc-playground/slices/default/Accordion/default/preview.png",
             "width": 2554,
             "height": 1204
           }
@@ -395,12 +395,12 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/.slicemachine/assets/slices/default/Features/default/preview.png",
+            "path": "/Users/dianka/Documents/POC/poc-playground/.slicemachine/assets/slices/default/Features/default/preview.png",
             "width": 1280,
             "height": 800
           },
           "withImage": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/slices/default/Features/withImage/preview.png",
+            "path": "/Users/dianka/Documents/POC/poc-playground/slices/default/Features/withImage/preview.png",
             "width": 1276,
             "height": 874
           }
@@ -793,17 +793,17 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/.slicemachine/assets/slices/default/HeroBanner/default/preview.png",
+            "path": "/Users/dianka/Documents/POC/poc-playground/.slicemachine/assets/slices/default/HeroBanner/default/preview.png",
             "width": 1280,
             "height": 582
           },
           "withoutCta": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/.slicemachine/assets/slices/default/HeroBanner/withoutCta/preview.png",
+            "path": "/Users/dianka/Documents/POC/poc-playground/.slicemachine/assets/slices/default/HeroBanner/withoutCta/preview.png",
             "width": 1280,
             "height": 548
           },
           "withSignUpAndMedia": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/slices/default/HeroBanner/withSignUpAndMedia/preview.png",
+            "path": "/Users/dianka/Documents/POC/poc-playground/slices/default/HeroBanner/withSignUpAndMedia/preview.png",
             "width": 1280,
             "height": 729
           }
@@ -964,12 +964,12 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/slices/default/MenuItem/default/preview.png",
+            "path": "/Users/dianka/Documents/POC/poc-playground/slices/default/MenuItem/default/preview.png",
             "width": 76,
             "height": 92
           },
           "dropdown": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/slices/default/MenuItem/dropdown/preview.png",
+            "path": "/Users/dianka/Documents/POC/poc-playground/slices/default/MenuItem/dropdown/preview.png",
             "width": 448,
             "height": 283
           }
@@ -1062,7 +1062,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/dianka/Documents/POC/prismic-poc/slices/default/SocialFeedFlickr/default/preview.png",
+            "path": "/Users/dianka/Documents/POC/poc-playground/slices/default/SocialFeedFlickr/default/preview.png",
             "width": 1248,
             "height": 401
           }
